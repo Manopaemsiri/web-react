@@ -1,0 +1,34 @@
+
+/* Topnav */
+nav.topnav{
+  position:fixed; top:0; left:0; width:100%; z-index:90;
+  background-image:linear-gradient(to bottom,rgba(255,255,255,.6),rgba(255,255,255,0));
+  transition:background .25s;
+}
+nav.topnav.sticky{background:#ffffff;}
+nav.topnav .topnav-wrapper{
+  position:relative; display:flex; align-items:center; justify-content:space-between;
+}
+
+nav.topnav .block-left{display:flex; align-items:center;}
+nav.topnav .logo{display:block; margin:0 1.5rem 0 0;}
+nav.topnav .logo > img{display:block; height:4rem; width:auto;}
+nav.topnav .menu-container{display:flex; align-items:center;}
+nav.topnav .menu{position:relative; padding:1.75rem .75rem;}
+nav.topnav .menu > a{
+  font-size:1.125rem; font-weight:700; color:#222222;
+}
+nav.topnav .menu:hover > a{color:#e5452b;}
+
+nav.topnav .menu > .dropdown{
+  position:absolute; top:calc(100% + .5rem); left:0; min-width:14rem;
+  border-radius:.25rem; opacity:0; pointer-events:none; background:#ffffff;
+  transition:opacity .25s, top .25s;
+}
+nav.topnav .menu:hover > .dropdown{top:100%; opacity:1; pointer-events:auto;}
+
+
+/* Sidenav */
+
+
+/* Footer */
