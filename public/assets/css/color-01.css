@@ -1,0 +1,79 @@
+
+/* Color Variable */
+:root {
+  --color-p: #4eb1f6;
+  --color-s: #00263b;
+}
+html, body{background:#ffffff; color:#141414;}
+
+
+/* Color */
+.color-black, .h-color-black:hover{color:#000000!important;}
+.color-white, .h-color-white:hover{color:#ffffff!important;}
+.color-dark, .h-color-dark:hover{color:#141414!important;}
+.color-gray, .h-color-gray:hover{color:#777777!important;}
+.color-fgray, .h-color-fgray:hover{color:#e4e4e4!important;}
+.color-p, .h-color-p:hover{color:var(--color-p)!important;}
+.color-s, .h-color-s:hover{color:var(--color-s)!important;}
+.color-info, .h-color-info:hover{color:#5a8dee!important;}
+.color-success, .h-color-success:hover{color:#4ecc48!important;}
+.color-warning, .h-color-warning:hover{color:#ecb403!important;}
+.color-danger, .h-color-danger:hover{color:#f5334f!important;}
+
+.bg-black{background:#000000!important;}
+.bg-white{background:#ffffff!important;}
+.bg-dark{background:#141414!important;}
+.bg-gray{background:#777777!important;}
+.bg-fgray{background:#e4e4e4!important;}
+.bg-p{background:var(--color-p)!important;}
+.bg-s{background:var(--color-s)!important;}
+.bg-info{background:#5a8dee!important;}
+.bg-success{background:#4ecc48!important;}
+.bg-warning{background:#ecb403!important;}
+.bg-danger{background:#f5334f!important;}
+
+.bcolor-black{border-color:#000000!important;}
+.bcolor-white{border-color:#ffffff!important;}
+.bcolor-dark{border-color:#141414!important;}
+.bcolor-gray{border-color:#777777!important;}
+.bcolor-fgray{border-color:#e4e4e4!important;}
+.bcolor-p{border-color:var(--color-p)!important;}
+.bcolor-s{border-color:var(--color-s)!important;}
+.bcolor-info{border-color:#5a8dee!important;}
+.bcolor-success{border-color:#4ecc48!important;}
+.bcolor-warning{border-color:#ecb403!important;}
+.bcolor-danger{border-color:#f5334f!important;}
+
+
+/* Button */
+.btn.btn-p, .btn.btn-p:focus{color:#ffffff; background:var(--color-p);}
+.btn.btn-p:hover{box-shadow:inset 0 0 0 100rem rgba(0,0,0,.07);}
+.btn.btn-p:active{box-shadow:inset 0 0 0 100rem rgba(0,0,0,.14);}
+
+.btn.btn-s, .btn.btn-s:focus{color:#ffffff; background:var(--color-s);}
+.btn.btn-s:hover{box-shadow:inset 0 0 0 100rem rgba(255,255,255,.07);}
+.btn.btn-s:active{box-shadow:inset 0 0 0 100rem rgba(255,255,255,.14);}
+
+
+/* Inputs */
+input[type=text], input[type=email], input[type=password], input[type=date], input[type=tel],
+input[type=number], input[type=phone], input[type=submit], input[type=file], input[type=time],
+select, textarea{
+  color:#000000; background:#ffffff; border-color:#cccccc!important;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=date]:focus, 
+input[type=tel]:focus, input[type=number]:focus, input[type=phone]:focus, input[type=submit]:focus, 
+input[type=file]:focus, input[type=time]:focus, select:focus, textarea:focus{
+  border-color:var(--color-p)!important;
+}
+
+input[type=text].disabled, input[type=email].disabled, input[type=password].disabled,
+input[type=date].disabled, input[type=tel].disabled, input[type=number].disabled,
+input[type=phone].disabled, input[type=submit].disabled, input[type=file].disabled,
+input[type=time].disabled, select.disabled, textarea.disabled,
+input[type=text]:disabled, input[type=email]:disabled, input[type=password]:disabled,
+input[type=date]:disabled, input[type=tel]:disabled, input[type=number]:disabled,
+input[type=phone]:disabled, input[type=submit]:disabled, input[type=file]:disabled,
+input[type=time]:disabled, select:disabled, textarea:disabled{
+  background:#f4f4f4!important; color:#555555!important;
+}

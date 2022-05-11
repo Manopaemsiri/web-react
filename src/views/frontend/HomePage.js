@@ -1,69 +1,79 @@
+import { Link } from 'react-router-dom';
+
 function HomePage() {
   return (
     <>
-      {/* SECTION-01 */}
-      <section className="section-01 d-flex ai-center">
-        <div className="container">
-          <div className="grids">
-            <div className="grid md-100 sm-100">
-              <div className="section-01_content">
-                <div className="section-01_text">
-                  <p className="mb-5">NetkaView Network Manager</p>
-                  <p className="section-01_title mb-3 fw-600 ">
-                    The perfect ITSM Solutions, Now <br />with ITIL Certification
-                  </p>
-                  <p className="mb-5">
-                    IT service desk solution to help <br /> youdeliver the best
-                    IT support to <br /> customers
-                  </p>
-                </div>
-                <div className="section-01_button">
-                  <button>View More</button>
+      <section className="section-01">
+        <div className="slide-container">
+          <div className="slides">
+            <div className="slide">
+              <div className="wrapper" style={{ backgroundImage: `url('/assets/img/bg/05.jpg')` }}>
+                <div className="container">
+                  <div className="text-wrapper">
+                    <h5 className="fw-700 color-s">
+                      NetkaView Network Manager
+                    </h5>
+                    <h2 className="fw-600 color-p xs-no-br mt-5">
+                      The perfect ITSM Solutions, Now <br />
+                      with ITIL Certification
+                    </h2>
+                    <div className="ss-sep-01 bg-s mt-3"></div>
+                    <h6 className="fw-700 mt-4">
+                      IT service desk solution to help <br /> youdeliver the best
+                      IT support to <br /> customers
+                    </h6>
+                  </div>
+                  <div className="btns pt-4">
+                    <Link to="/" className="btn btn-action btn-p">
+                      VIEW MORE
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* SECTION-02 */}
-      <section className="section-02">
+
+      <section className="section-02 bg-p">
         <div className="container">
           <div className="grids ai-center">
-            <div className="grid md-50 sm-100">
-              <div className="section-02_text">
-                <p>AIOPS ITOM ITIL ITSM IoT BI</p>
+            <div className="grid lg-75 md-70 sm-100 mt-0">
+              <div className="text-container">
+                <h5 className="fw-400 color-white">
+                  AIOPS ITOM ITIL ITSM IoT BI
+                </h5>
               </div>
             </div>
-            <div className="grid md-50 sm-100">
-              <div className="section-02_button text-right">
-                <button className="fw-700">Get A Quote</button>
+            <div className="grid lg-25 md-30 sm-100 mt-0">
+              <div className="btn-container">
+                <Link to="/" className="btn btn-action btn-s">
+                  GET A QUOTE
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* SECTION-03 */}
+
       <section className="section-03 section-padding">
         <div className="container">
-          <div className="grids">
-            <div className="grid md-100 sm-100">
-              <div className="section-03_content text-center">
-                <h1 className="section-03_title">ITOM</h1>
-                <p className="section-03_desc mb-5">
-                  IT operations management (ITOM) is the administrative area
-                  involving technology infrastructure components and the
-                  requirements of individual applications, services, storage,
-                  networking and connectivity elements within an organization.
-                </p>
-                <div className="section-03_button">
-                  <button>View More</button>
-                </div>
-              </div>
-            </div>
+          <h2 className="fw-600 color-s text-center">ITOM</h2>
+          <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
+          <p className="text-center mt-5">
+            IT operations management (ITOM) is the administrative area
+            involving technology infrastructure components and the
+            requirements of individual applications, services, storage,
+            networking and connectivity elements within an organization.
+          </p>
+          <div className="text-center mt-6">
+            <Link to="/" className="btn btn-action btn-p">
+              VIEW MORE
+            </Link>
           </div>
         </div>
       </section>
-      {/* SECTION-04 */}
+      
       <section className="section-04 section-padding">
         <div className="container">
           <div className="text-center">
