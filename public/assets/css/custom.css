@@ -22,6 +22,59 @@
   --section-03-btn-bg: #555555;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+    --section-02-bg: #f4524d;
+    --section-03-bg: #F5F5F5;
+    --section-04-bg: #E0E0E0;
+    --section-05-bg: #00263B;
+    --section-06-bg: #CECECE;
+    --section-08-bg: #DDDDDD;
+    --section-09-bg: #00263BBF;
+    --footer-bg: #00263B;
+}
+
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+
 * {margin:0; padding:0; box-sizing:border-box}
 
 img {max-width:100%; height:auto;}
@@ -127,6 +180,23 @@ h5:before {
 
 /* section-copyright */
 .section-copyright {padding:1.5rem; color:#80939D;}
+.section-01 {
+    width:100%; height:100%; min-height:600px;
+    background-image: url('/assets/img/bg/02.jpg');
+    background-size:cover; background-repeat:no-repeat; background-position:center;
+}
+.section-02 {background:var(--section-02-bg); padding:20px;}
+.section-03 {background:var(--section-03-bg);}
+.section-04 {background:var(--section-04-bg);}
+.section-05 {background:var(--section-05-bg);}
+.section-06 {background:var(--section-06-bg);}
+.section-08 {background:var(--section-08-bg);}
+.section-09 {background:var(--section-09-bg);}
+.section-footer {background:var(--footer-bg);}
+.section-copyright {padding:20px;}
+
+.section-01 .section-01_title {color:#E5452B; font-family: 'Roboto', sans-serif;}
+.section-01 .section-01_button {padding:0;}
 
 /* Social Bar */
 .icon-bar {position: fixed; right: 0; top: 50%; transform: translateY(-50%); }
@@ -141,5 +211,4 @@ h5:before {
 .google {background: #dd4b39; color: white;}
 .linkedin{background: #007bb5; color: white;}
 .youtube {background: #bb0000; color: white;}
-
   
