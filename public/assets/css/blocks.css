@@ -1,0 +1,10 @@
+/* section-02 */
+@media screen and (max-width:767.98px){
+   .section-01 {padding-top: 2rem;}
+
+   .section-02_text,
+   .section-02_button {text-align: center !important;}
+
+   .section-footer .footer_nav_link {justify-content: start !important;}
+   .section-footer ul {min-height: 0 !important;}
+}
