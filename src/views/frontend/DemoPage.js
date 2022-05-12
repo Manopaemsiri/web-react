@@ -1,36 +1,9 @@
-import { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom";
-import ReactPlayer from "react-player";
+
 import React from "react";
 
-function VimeoPlayer() {
-  return (
-    <div>
-      <ReactPlayer className="vimeo-player"
-        url="https://vimeo.com/512951500"
-        max-width="100%"
-        min-height="400px"
-        autoplay="true"
-      />
-    </div>
-  );
-}
-
 function DemoPage() {
-  const [offsetY, setOffsetY] = useState(0);
-
-  /* eslint-disable */
-  useEffect(() => {
-    setOffsetY(window.pageYOffset);
-    const handleScroll = () => {
-      setOffsetY(window.pageYOffset);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return function cleanup() {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  /* eslint-enable */
 
   return (
     <>
@@ -177,7 +150,7 @@ function DemoPage() {
                   </div>
                   <br />
                   <div className="vimeo-container mt-6">
-                    <VimeoPlayer />
+                  
                   </div>
                   <p className="mt-6">
                     AIOps stand for Artificial Intelligence for IT Operations,
@@ -208,24 +181,24 @@ function DemoPage() {
               <div className="right-content">
                 <ul className="bg-p p-5 color-white bx-shadow">
                   <li>
-                    <Link className="p color-white">What is AIOps?</Link>
+                    <Link to="/" className="p color-white">What is AIOps?</Link>
                   </li>
                   <li>
-                    <Link className="p color-white">
+                    <Link to="/" className="p color-white">
                       What does AIOps relate with IT Operations?
                     </Link>
                   </li>
                   <li>
-                    <Link className="p color-white">AIOps Benefits</Link>
+                    <Link to="/" className="p color-white">AIOps Benefits</Link>
                   </li>
                   <li>
-                    <Link className="p color-white">AIOps for Monitoring</Link>
+                    <Link to="/" className="p color-white">AIOps for Monitoring</Link>
                   </li>
                   <li>
-                    <Link className="p color-white">AIOps for ITSM</Link>
+                    <Link to="/" className="p color-white">AIOps for ITSM</Link>
                   </li>
                   <li>
-                    <Link className="p color-white">AIOps for Automation</Link>
+                    <Link to="/" className="p color-white">AIOps for Automation</Link>
                   </li>
                 </ul>
 
