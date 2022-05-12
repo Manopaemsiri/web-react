@@ -108,11 +108,18 @@ p.xxxs, .p.xxxs, label.xxxs{font-size:.75rem;} */
 .btns > .btn.btn-action{margin:.375rem .375rem 0 0;}
 .btn.btn-action:hover{box-shadow:inset 0 0 0 100rem rgba(0,0,0,.05);}
 .btn.btn-action:active{box-shadow:inset 0 0 0 100rem rgba(0,0,0,.1);}
+
+.btn.btn-action.btn-xs{
+	font-size:1rem; padding:.5rem .625rem; min-width:8.5rem;
+	font-weight:400; letter-spacing:.125rem;
+}
 @media screen and (max-width:991.98px){
 	.btn.btn-action{min-width:12.25rem; padding:.875rem;}
+	.btn.btn-action.btn-xs{padding:.4375rem .625rem; min-width:8rem;}
 }
 @media screen and (max-width:767.98px){
 	.btn.btn-action{min-width:11.25rem; padding:.75rem;}
+	.btn.btn-action.btn-xs{padding:.375rem .625rem; min-width:7rem;}
 }
 
 .btn-icon{

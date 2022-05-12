@@ -2,33 +2,68 @@
 /* Topnav */
 nav.topnav{
   position:fixed; top:0; left:0; width:100%; z-index:90;
-  background-image:linear-gradient(to bottom,rgba(255,255,255,.6),rgba(255,255,255,0));
-  transition:background .25s;
+  transition:box-shadow .25s, background .25s;
 }
-nav.topnav.sticky{background:#ffffff;}
 nav.topnav .topnav-wrapper{
-  position:relative; display:flex; align-items:center; justify-content:space-between;
+  position:relative; min-height:4.25rem;
+  display:flex; align-items:center; justify-content:space-between;
 }
+nav.topnav .block-left, nav.topnav .block-right{display:flex; align-items:center;}
 
-nav.topnav .block-left{display:flex; align-items:center;}
 nav.topnav .logo{display:block; margin:0 1.5rem 0 0;}
-nav.topnav .logo > img{display:block; height:4rem; width:auto;}
-nav.topnav .menu-container{display:flex; align-items:center;}
-nav.topnav .menu{position:relative; padding:1.75rem .75rem;}
-nav.topnav .menu > a{
-  font-size:1.125rem; font-weight:700; color:#222222;
-}
-nav.topnav .menu:hover > a{color:#e5452b;}
+nav.topnav .logo > img{display:block; height:2.5rem; width:auto;}
+nav.topnav .logo > img.show-xs{display:none; height:2.875rem;}
 
+nav.topnav .menu-container{display:flex; align-items:center;}
+nav.topnav .menu{
+  position:relative; padding:2rem 0; margin:0 .875rem; transition:padding .25s;
+}
+nav.topnav.sticky .menu{padding:1.375rem 0;}
+nav.topnav .menu > a{display:block; font-size:1rem; letter-spacing:.05rem; font-weight:700;}
 nav.topnav .menu > .dropdown{
-  position:absolute; top:calc(100% + .5rem); left:0; min-width:14rem;
-  border-radius:.25rem; opacity:0; pointer-events:none; background:#ffffff;
+  position:absolute; top:calc(100% + .5rem); left:-.875rem;
+  opacity:0; pointer-events:none; border:1px solid transparent;
   transition:opacity .25s, top .25s;
 }
 nav.topnav .menu:hover > .dropdown{top:100%; opacity:1; pointer-events:auto;}
+nav.topnav .submenu-container{min-width:12rem; padding:.625rem 0;}
+nav.topnav .submenu{position:relative;}
+nav.topnav .submenu > a{
+  display:block; font-size:1rem; padding:.625rem .875rem; letter-spacing:.05rem;
+  font-weight:600; transition:background .25s, color .25s;
+}
+
+nav.topnav .sidenav-toggle{
+  display:none; padding:1rem .75rem; transform:translateX(.75rem); cursor:pointer;
+}
+
+@media screen and (max-width:1199.98px){
+  nav.topnav .menu-container{display:none;}
+  nav.topnav .sidenav-toggle{display:block;}
+}
+@media screen and (max-width:767.98px){
+  nav.topnav .logo > img.show-xs{display:block;}
+  nav.topnav .logo > img.hide-xs{display:none;}
+}
 
 
 /* Sidenav */
+nav.sidenav{
+  display:none; position:fixed; top:0; right:0; width:320px; height:100vh; z-index:92;
+  transform:translateX(320px); transition:transform .45s;
+}
+nav.sidenav.active{transform:translateX(0);}
+
+nav.sidenav + .sidenav-filter{
+  display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:91;
+  cursor:pointer; pointer-events:none; opacity:0; transition:opacity .45s;
+}
+nav.sidenav.active + .sidenav-filter{pointer-events:auto; opacity:1;}
+
+@media screen and (max-width:1199.98px){
+  nav.sidenav{display:block;}
+  nav.sidenav + .sidenav-filter{display:block;}
+}
 
 
 /* Footer */

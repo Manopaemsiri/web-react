@@ -7,6 +7,12 @@ function Header() {
   
   const location = useLocation();
 	const [currentPath, setCurrentPath] = useState('/');
+
+  const [isSidenavActive, setIsSidenavActive] = useState(false);
+  const onToggleSidenav = (e) => {
+    e.preventDefault();
+    setIsSidenavActive(!isSidenavActive);
+  };
   
   /* eslint-disable */
 	useEffect(() => {
@@ -35,7 +41,8 @@ function Header() {
 
             <div className="block-left">
               <Link className="logo" to="/">
-                <img src="/assets/img/logo.png" alt="App Logo" />
+                <img className="hide-xs" src="/assets/img/logo.png" alt="App Logo" />
+                <img className="show-xs" src="/assets/img/logo-alone.png" alt="App Logo" />
               </Link>
               <div className="menu-container">
                 <div className="menu">
@@ -43,7 +50,7 @@ function Header() {
                 </div>
 
                 <div className="menu">
-                  <Link to="/solutions">SOLUTIONS</Link>
+                  <Link to="/services">SERVICES</Link>
                   <div className="dropdown">
                     <div className="submenu-container">
                       <div className="submenu">
@@ -101,9 +108,6 @@ function Header() {
                   </div>
                 </div>
                 <div className="menu">
-                  <Link to="/supports">SUPPORTS</Link>
-                </div>
-                <div className="menu">
                   <Link to="/news">NEWS</Link>
                 </div>
                 <div className="menu">
@@ -113,13 +117,27 @@ function Header() {
             </div>
 
             <div className="block-right">
-              RIGHT SIDE
+              <Link to="/" className="btn btn-action btn-xs btn-p">
+                CONTACT US
+              </Link>
+              <div className="sidenav-toggle" onClick={onToggleSidenav}>
+                <div className={`hamburger ${isSidenavActive? 'active': ''}`}>
+                  <div></div><div></div><div></div>
+                </div>
+              </div>
             </div>
 
           </div>
         </div>
       </nav>
       <div className="topnav-spacer"></div>
+
+      <nav className={`sidenav ${isSidenavActive? 'active': ''}`}>
+        <div className="wrapper">
+
+        </div>
+      </nav>
+      <div className="sidenav-filter" onClick={onToggleSidenav}></div>
     </>
   );
 }

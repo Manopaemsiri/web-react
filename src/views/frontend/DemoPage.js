@@ -1,13 +1,11 @@
 
 import { Link } from "react-router-dom";
 
-import React from "react";
 
 function DemoPage() {
 
   return (
     <>
-      <section className="section-demo-01 bg-p"></section>
       <section className="section-demo-02 section-padding">
         <div className="container">
           <div className="grids">
@@ -211,9 +209,9 @@ function DemoPage() {
                   <div className="contact-container mt-4">
                     <p>Facebook</p>
                     <p>
-                      <Link to="https://www.facebook.com/TechOriginTH">
+                      <a href="https://www.facebook.com/TechOriginTH">
                         Tech Origin Co., Ltd.
-                      </Link>
+                      </a>
                     </p>
                   </div>
                   <div className="contact-container mt-4">
