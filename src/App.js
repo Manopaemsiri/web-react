@@ -4,7 +4,8 @@ import Footer from './components/Footer';
 
 import { 
   Demo_HomePage,
-  Frontend_HomePage
+  Frontend_HomePage,
+  Products_HomePage
 } from './views/frontend';
 
 
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Frontend_HomePage} />
         <Route exact path="/demo" component={Demo_HomePage} />
+        <Route exact path="/products" component={Products_HomePage} />
         <Route path="*" component={Frontend_HomePage} />
       </Switch>
       <Footer />

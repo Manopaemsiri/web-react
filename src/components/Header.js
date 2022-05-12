@@ -58,7 +58,7 @@ function Header() {
                   <div className="dropdown">
                     <div className="submenu-container">
                       <div className="submenu">
-                        <Link to="/">Section 1</Link>
+                        <Link to="/products">Section 1</Link>
                       </div>
                       <div className="submenu">
                         <Link to="/">Section 2</Link>

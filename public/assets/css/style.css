@@ -68,7 +68,7 @@ h3, .h3{font-size:1.75rem;}
 h4, .h4{font-size:1rem;} 
 h5, .h5{font-size:1.4375rem;}
 h6, .h6{font-size:1.25rem;}
-p {font-size: 0.9rem; color:#777777;}
+p, .p{font-size: 0.9rem; color:#777777;}
 /* p.lg, .p.lg, label.lg{font-size:1.125rem;} */
 /* p, .p, label{font-size:1rem;} */
 /* p.sm, .p.sm, label.sm{font-size:.9375rem;}

@@ -3,6 +3,7 @@
 :root {
   --color-p: #4eb1f6;
   --color-s: #00263b;
+  --color-01: #929292;
 }
 html, body{background:#ffffff; color:#141414;}
 
