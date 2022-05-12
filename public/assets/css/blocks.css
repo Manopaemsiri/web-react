@@ -1,3 +1,4 @@
+
 /* Section 01 */
 .section-01 .slide-container{position:relative;}
 .section-01 .slide > .wrapper{
@@ -5,19 +6,32 @@
   background-size:cover; background-position:center; background-repeat:no-repeat;
 }
 
+
 /* Section 02 */
 .section-02{padding:1rem 0;}
-.section-02 .btn-container{text-align:right;}
+.section-02 .btn-wrapper{text-align:right;}
 @media screen and (max-width:767.98px){
-  .section-02 .text-container, .section-02 .btn-container{text-align:center;}
-  .section-02 .btn-container{margin:1rem 0 0 0;}
+  .section-02 .text-wrapper, .section-02 .btn-wrapper{text-align:center;}
+  .section-02 .btn-wrapper{margin:1rem 0 0 0;}
 }
 
-/* Section 09 */
-.section-09 {
-  width:100%; height:100%; min-height:500px;  background-image: url('/assets/img/bg/06.jpg');
-  background-size:cover; background-repeat:no-repeat; background-position:center; ;
+
+/* Section 03 */
+@media screen and (max-width:991.98px){
+  .section-03 .img-wrapper{margin:2.5rem 0 0 0;}
 }
+@media screen and (min-width:992px){
+  .section-03.reverse .grids{direction:rtl;}
+}
+
+
+/* Section 09 */
+.section-09{
+  position:relative; min-height:500px;
+  background-size:cover; background-repeat:no-repeat; background-position:center;
+}
+.section-09 > .bg-filter{position:absolute; top:0; bottom:0; left:0; right:0;}
+
 
 /* Section Footer */
 .form input[type=text], input[type="submit"] {border-radius: 0 !important;}

@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 
 function Header() {
 	const [offsetY, setOffsetY] = useState(0);
+  
+  const location = useLocation();
+	const [currentPath, setCurrentPath] = useState('/');
   
   /* eslint-disable */
 	useEffect(() => {
@@ -16,6 +19,12 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+	useEffect(() => {
+    if(currentPath !== location.pathname){
+      window.scrollTo(0, 0);
+      setCurrentPath(location.pathname);
+    }
+  }, [location]);
   /* eslint-enable */
 
   return (
