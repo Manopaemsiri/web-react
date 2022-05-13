@@ -19,7 +19,9 @@ nav.topnav .menu{
   position:relative; padding:2rem 0; margin:0 .875rem; transition:padding .25s;
 }
 nav.topnav.sticky .menu{padding:1.375rem 0;}
-nav.topnav .menu > a{display:block; font-size:1rem; letter-spacing:.05rem; font-weight:700;}
+nav.topnav .menu > *:first-child{
+  display:block; font-size:1rem; letter-spacing:.05rem; font-weight:700; cursor:pointer;
+}
 nav.topnav .menu > .dropdown{
   position:absolute; top:calc(100% + .5rem); left:-.875rem;
   opacity:0; pointer-events:none; border:1px solid transparent;
@@ -28,9 +30,9 @@ nav.topnav .menu > .dropdown{
 nav.topnav .menu:hover > .dropdown{top:100%; opacity:1; pointer-events:auto;}
 nav.topnav .submenu-container{min-width:12rem; padding:.625rem 0;}
 nav.topnav .submenu{position:relative;}
-nav.topnav .submenu > a{
+nav.topnav .submenu > *:first-child{
   display:block; font-size:1rem; padding:.625rem .875rem; letter-spacing:.05rem;
-  font-weight:600; transition:background .25s, color .25s;
+  font-weight:600; cursor:pointer; transition:background .25s, color .25s;
 }
 
 nav.topnav .sidenav-toggle{

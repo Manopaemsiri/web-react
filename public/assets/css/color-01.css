@@ -98,12 +98,14 @@ input[type=time]:disabled, select:disabled, textarea:disabled{
 
 /* Topnav */
 nav.topnav.sticky{background:#ffffff; box-shadow:rgb(0 0 0 / 3%) 0px 7px 14px;}
-nav.topnav .menu > a{color:#242424;}
-nav.topnav .menu:hover > a{color:var(--color-p);}
+nav.topnav .menu > *:first-child{color:#242424;}
+nav.topnav .menu:hover > *:first-child,
+nav.topnav .menu.active > *:first-child{color:var(--color-p);}
 nav.topnav .menu > .dropdown{
   background:#ffffff; box-shadow:rgb(0 0 0 / 3%) 0px 7px 14px; border-color:#eeeeee;
 }
-nav.topnav .submenu:hover > a{background:var(--color-p); color:#ffffff;}
+nav.topnav .submenu:hover > *:first-child{background:var(--color-p); color:#ffffff;}
+nav.topnav .submenu.active > *:first-child{background:#ffffff; color:var(--color-p);}
 nav.topnav .hamburger > *{background:#242424;}
 
 /* Sidenav */

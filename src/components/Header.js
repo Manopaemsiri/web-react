@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
+import { connect } from 'react-redux';
 
-function Header() {
+
+function Header(props) {
 	const [offsetY, setOffsetY] = useState(0);
   
   const location = useLocation();
 	const [currentPath, setCurrentPath] = useState('/');
+  
+	const [menu, setMenu] = useState([]);
 
   const [isSidenavActive, setIsSidenavActive] = useState(false);
   const onToggleSidenav = (e) => {
     e.preventDefault();
     setIsSidenavActive(!isSidenavActive);
   };
-  
+
   /* eslint-disable */
 	useEffect(() => {
 		setOffsetY(window.pageYOffset);
@@ -31,6 +35,42 @@ function Header() {
       setCurrentPath(location.pathname);
     }
   }, [location]);
+  
+	useEffect(() => {
+    setMenu([
+      {
+        name: 'HOME',
+        goTo: '/',
+        activeIndexes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      }, {
+        name: 'SERVICES',
+        activeIndexes: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+        children: [
+          {
+            name: 'Demo 01', activeIndex: 11, goTo: '/demo'
+          }, {
+            name: 'Demo 02', activeIndex: 12, goTo: '/demo'
+          },
+        ]
+      }, {
+        name: 'PRODUCTS',
+        goTo: '/products',
+        activeIndexes: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+      }, {
+        name: 'TESTIMONIALS',
+        goTo: '/testimonials',
+        activeIndexes: [31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+      }, {
+        name: 'NEWS',
+        goTo: '/news',
+        activeIndexes: [41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+      }, {
+        name: 'COMPANY',
+        goTo: '/company',
+        activeIndexes: [51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+      },
+    ]);
+  }, []);
   /* eslint-enable */
 
   return (
@@ -45,74 +85,32 @@ function Header() {
                 <img className="show-xs" src="/assets/img/logo-alone.png" alt="App Logo" />
               </Link>
               <div className="menu-container">
-                <div className="menu">
-                  <Link to="/">HOME</Link>
-                </div>
-
-                <div className="menu">
-                  <Link to="/services">SERVICES</Link>
-                  <div className="dropdown">
-                    <div className="submenu-container">
-                      <div className="submenu">
-                        <Link to="/demo">Demo Page</Link>
+                {menu.map((d, i) => (
+                  <div 
+                    key={`menu_${i}`} 
+                    className={`menu ${d.activeIndexes.indexOf(props.activeIndex) > -1? 'active': ''}`} 
+                  >
+                    {d.goTo? (
+                      <Link to={d.goTo}>{d.name}</Link>
+                    ): (
+                      <div>{d.name}</div>
+                    )}
+                    {d.children && d.children.length? (
+                      <div className="dropdown">
+                        <div className="submenu-container">
+                          {d.children.map((k, j) => (
+                            <div 
+                              key={`submenu_${i}_${j}`} 
+                              className={`submenu ${k.activeIndex === props.activeIndex? 'active': ''}`} 
+                            >
+                              <Link to={k.goTo}>{k.name}</Link>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <div className="submenu">
-                        <Link to="/">Section 2</Link>
-                      </div>
-                      <div className="submenu">
-                        <Link to="/">Section 3</Link>
-                      </div>
-                      <div className="submenu">
-                        <Link to="/">Section 4</Link>
-                      </div>
-                    </div>
+                    ): (<></>)}
                   </div>
-                </div>
-
-                <div className="menu">
-                  <Link to="/products">PRODUCTS</Link>
-                  <div className="dropdown">
-                    <div className="submenu-container">
-                      <div className="submenu">
-                        <Link to="/products">Section 1</Link>
-                      </div>
-                      <div className="submenu">
-                        <Link to="/">Section 2</Link>
-                      </div>
-                      <div className="submenu">
-                        <Link to="/">Section 3</Link>
-                      </div>
-                      <div className="submenu">
-                        <Link to="/">Section 4</Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="menu">
-                  <Link to="/testimonials">TESTIMONIALS</Link>
-                  <div className="dropdown">
-                    <div className="submenu-container">
-                      <div className="submenu">
-                        <Link to="/">Section 1</Link>
-                      </div>
-                      <div className="submenu">
-                        <Link to="/">Section 2</Link>
-                      </div>
-                      <div className="submenu">
-                        <Link to="/">Section 3</Link>
-                      </div>
-                      <div className="submenu">
-                        <Link to="/">Section 4</Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="menu">
-                  <Link to="/news">NEWS</Link>
-                </div>
-                <div className="menu">
-                  <Link to="/company">COMPANY</Link>
-                </div>
+                ))}
               </div>
             </div>
 
@@ -134,7 +132,35 @@ function Header() {
 
       <nav className={`sidenav ${isSidenavActive? 'active': ''}`}>
         <div className="wrapper">
-
+          
+          <div className="menu-container">
+            {menu.map((d, i) => (
+              <div 
+                key={`menu_${i}`} 
+                className={`menu ${d.activeIndexes.indexOf(props.activeIndex) > -1? 'active': ''}`} 
+              >
+                {d.goTo? (
+                  <Link to={d.goTo}>{d.name}</Link>
+                ): (
+                  <div>{d.name}</div>
+                )}
+                {d.children && d.children.length? (
+                  <div className="dropdown">
+                    <div className="submenu-container">
+                      {d.children.map((k, j) => (
+                        <div 
+                          key={`submenu_${i}_${j}`} 
+                          className={`submenu ${k.activeIndex === props.activeIndex? 'active': ''}`} 
+                        >
+                          <Link to={k.goTo}>{k.name}</Link>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ): (<></>)}
+              </div>
+            ))}
+          </div>
         </div>
       </nav>
       <div className="sidenav-filter" onClick={onToggleSidenav}></div>
@@ -142,4 +168,10 @@ function Header() {
   );
 }
 
-export default Header;
+const mapStateToProps = (state) => ({
+  activeIndex: state.general.topnavActiveIndex
+});
+
+export default connect(mapStateToProps, {
+  
+})(Header);

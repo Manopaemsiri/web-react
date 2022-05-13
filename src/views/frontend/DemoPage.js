@@ -1,6 +1,15 @@
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-function DemoPage() {
+import { connect } from 'react-redux';
+import { setTopnavActiveIndex } from '../../actions/general.actions';
+
+
+function DemoPage(props) {
+
+  /* eslint-disable */
+	useEffect(() => { props.setTopnavActiveIndex(11); }, []);
+  /* eslint-enable */
 
   return (
     <>
@@ -257,4 +266,10 @@ function DemoPage() {
   );
 }
 
-export default DemoPage;
+const mapStateToProps = (state) => ({
+  
+});
+
+export default connect(mapStateToProps, {
+  setTopnavActiveIndex: setTopnavActiveIndex
+})(DemoPage);

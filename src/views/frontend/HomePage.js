@@ -1,9 +1,18 @@
-import { Link } from "react-router-dom";
-import SpecialImage from "../../components/SpecialImage";
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import SpecialImage from '../../components/SpecialImage';
 import { Clock } from 'react-feather';
 
+import { connect } from 'react-redux';
+import { setTopnavActiveIndex } from '../../actions/general.actions';
 
-function HomePage() {
+
+function HomePage(props) {
+
+  /* eslint-disable */
+	useEffect(() => { props.setTopnavActiveIndex(1); }, []);
+  /* eslint-enable */
+
   return (
     <>
       <section className="section-01">
@@ -285,4 +294,10 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+const mapStateToProps = (state) => ({
+  
+});
+
+export default connect(mapStateToProps, {
+  setTopnavActiveIndex: setTopnavActiveIndex
+})(HomePage);
