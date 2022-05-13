@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-
+import { X } from 'react-feather';
 import { connect } from 'react-redux';
 
 
@@ -44,18 +44,38 @@ function Header(props) {
         activeIndexes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
       }, {
         name: 'SERVICES',
+        goTo: '/',
         activeIndexes: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         children: [
           {
             name: 'Demo 01', activeIndex: 11, goTo: '/demo'
           }, {
             name: 'Demo 02', activeIndex: 12, goTo: '/demo'
+          }, {
+            name: 'Demo 03', activeIndex: 13, goTo: '/demo'
+          }, {
+            name: 'Demo 04', activeIndex: 14, goTo: '/demo'
+          },{
+            name: 'Demo 05', activeIndex: 15, goTo: '/demo'
           },
         ]
       }, {
         name: 'PRODUCTS',
         goTo: '/products',
-        activeIndexes: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+        activeIndexes: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+        children: [
+          {
+            name: 'Demo 01', activeIndex: 21, goTo: '/demo'
+          }, {
+            name: 'Demo 02', activeIndex: 22, goTo: '/demo'
+          }, {
+            name: 'Demo 03', activeIndex: 23, goTo: '/demo'
+          }, {
+            name: 'Demo 04', activeIndex: 24, goTo: '/demo'
+          },{
+            name: 'Demo 05', activeIndex: 25, goTo: '/demo'
+          },
+        ]
       }, {
         name: 'TESTIMONIALS',
         goTo: '/testimonials',
@@ -132,8 +152,11 @@ function Header(props) {
 
       <nav className={`sidenav ${isSidenavActive? 'active': ''}`}>
         <div className="wrapper">
-          
-          <div className="menu-container">
+          <div className="text-right">
+          <X size={40} onClick={onToggleSidenav} className="m-6 bg-p color-white" />        
+          </div>
+        
+          <div className="menu-container ml-6 pl-6">
             {menu.map((d, i) => (
               <div 
                 key={`menu_${i}`} 

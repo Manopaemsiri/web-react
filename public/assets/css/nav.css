@@ -67,6 +67,20 @@ nav.sidenav.active + .sidenav-filter{pointer-events:auto; opacity:1;}
   nav.sidenav + .sidenav-filter{display:block;}
 }
 
+.menu-container .menu {margin-top:1rem;}
+.menu-container .menu > a {font-size: 2rem; font-weight:600;}
+.menu-container .menu > a:hover {color: #4EB1F6;}
+.menu-container .submenu-container {margin-top:0.975rem;}
+.submenu-container .submenu > a {font-size:1.4rem; color:#00263B;}
+.menu-container .menu > a:hover {color: #4EB1F6;}
+
+@media screen and (max-width:767.98px){
+  .menu-container .menu > a {font-size: 1.3rem;}
+}
+@media screen and (max-width:575.98px){
+  .menu-container .menu > a {font-size: 1.1rem;}
+  .submenu-container .submenu > a {font-size:1rem;}
+}
 
 /* Footer */
 .section-footer {background:var(--footer-bg);}
