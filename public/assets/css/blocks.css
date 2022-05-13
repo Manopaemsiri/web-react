@@ -66,13 +66,17 @@
 .section-copyright {padding:1rem;}
 
 
-.section-demo-01{
-  width:100vw; height:100vh;
-}
-
 .section-pro-01{
-  width:100vw; height:100vh;
+  height:100vh;
+  background-size:cover; background-repeat:no-repeat; background-position:center;
 }
+.section-pro-01 h1{font-size:3.4375rem;}
+
+.section-pro-02 {
+  position:relative; min-height:500px; background-attachment: fixed;
+  background-size:cover; background-repeat:no-repeat; background-position:center;
+}
+.section-pro-02 {font-size:2.5rem;}
 
 /* Right content */
 .right-content ul {list-style-type: none;}
