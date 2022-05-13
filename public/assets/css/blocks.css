@@ -1,9 +1,33 @@
 
 /* Section 01 */
-.section-01 .slide-container{position:relative;}
+.section-01{position:relative;}
 .section-01 .slide > .wrapper{
   display:flex; align-items:center; width:100vw; height:100vh; padding:2rem 0 0 0;
   background-size:cover; background-position:center; background-repeat:no-repeat;
+}
+.section-01 .arrows{
+  position:absolute; bottom:0; left:0; width:100%; pointer-events:none; z-index:1;
+  padding:2rem 0;
+}
+.section-01 .arrows > .container{text-align:right;}
+.section-01 .arrow{
+  border-radius:50%; opacity:0; margin:0 0 0 auto; pointer-events:auto; z-index:1;
+  display:flex; align-items:center; justify-content:center; width:3rem; height:3rem;
+  cursor:pointer; transition:background .25s, color .25s, opacity .25s;
+}
+.section-01:hover .arrow{opacity:1;}
+.section-01 .arrow.arrow-prev{transform:translateX(-3.5rem);}
+@media screen and (max-width:991.98px){
+  .section-01 .arrows{padding:1.75rem 0;}
+  .section-01 .arrow{width:2.75rem; height:2.75rem;}
+  .section-01 .arrow.arrow-prev{transform:translateX(-3.25rem);}
+  .section-01 .arrow > svg{transform:scale(.9);}
+}
+@media screen and (max-width:767.98px){
+  .section-01 .arrows{padding:1.25rem 0;}
+  .section-01 .arrow{width:2.5rem; height:2.5rem;}
+  .section-01 .arrow.arrow-prev{transform:translateX(-3rem);}
+  .section-01 .arrow > svg{transform:scale(.8);}
 }
 
 

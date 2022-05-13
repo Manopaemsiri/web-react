@@ -2,6 +2,9 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SpecialImage from '../../components/SpecialImage';
 import { Clock } from 'react-feather';
+import { onMounted } from '../../helpers/frontend';
+
+import SectionBanner from '../../components/SectionBanner';
 
 import { connect } from 'react-redux';
 import { setTopnavActiveIndex } from '../../actions/general.actions';
@@ -10,45 +13,12 @@ import { setTopnavActiveIndex } from '../../actions/general.actions';
 function HomePage(props) {
 
   /* eslint-disable */
-	useEffect(() => { props.setTopnavActiveIndex(1); }, []);
+	useEffect(() => { onMounted(false); props.setTopnavActiveIndex(1); }, []);
   /* eslint-enable */
 
   return (
     <>
-      <section className="section-01">
-        <div className="slide-container">
-          <div className="slides">
-            <div className="slide">
-              <div
-                className="wrapper"
-                style={{ backgroundImage: `url('/assets/img/bg/05.jpg')` }}
-              >
-                <div className="container">
-                  <div className="text-wrapper">
-                    <h5 className="fw-700 color-s">
-                      NetkaView Network Manager
-                    </h5>
-                    <h2 className="fw-600 color-p xs-no-br mt-5">
-                      The perfect ITSM Solutions, Now <br />
-                      with ITIL Certification
-                    </h2>
-                    <div className="ss-sep-01 bg-s mt-3"></div>
-                    <h6 className="fw-700 mt-4">
-                      IT service desk solution to help <br /> youdeliver the
-                      best IT support to <br /> customers
-                    </h6>
-                  </div>
-                  <div className="btns pt-4">
-                    <Link to="/" className="btn btn-action btn-p">
-                      VIEW MORE
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SectionBanner />
 
       <section className="section-02 bg-p">
         <div className="container">

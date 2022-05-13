@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { X } from 'react-feather';
+
 import { connect } from 'react-redux';
+
+import $ from 'jquery';
 
 
 function Header(props) {
@@ -15,7 +17,13 @@ function Header(props) {
   const [isSidenavActive, setIsSidenavActive] = useState(false);
   const onToggleSidenav = (e) => {
     e.preventDefault();
-    setIsSidenavActive(!isSidenavActive);
+    if(isSidenavActive){
+      $('html').removeClass('sidenav-opened');
+      setIsSidenavActive(false);
+    }else{
+      $('html').addClass('sidenav-opened');
+      setIsSidenavActive(true);
+    }
   };
 
   /* eslint-disable */
@@ -33,6 +41,8 @@ function Header(props) {
     if(currentPath !== location.pathname){
       window.scrollTo(0, 0);
       setCurrentPath(location.pathname);
+      $('html').removeClass('sidenav-opened');
+      setIsSidenavActive(false);
     }
   }, [location]);
   
@@ -44,7 +54,7 @@ function Header(props) {
         activeIndexes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
       }, {
         name: 'SERVICES',
-        goTo: '/',
+        goTo: '/services',
         activeIndexes: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         children: [
           {
@@ -79,7 +89,20 @@ function Header(props) {
       }, {
         name: 'TESTIMONIALS',
         goTo: '/testimonials',
-        activeIndexes: [31, 32, 33, 34, 35, 36, 37, 38, 39, 40]
+        activeIndexes: [31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+        children: [
+          {
+            name: 'Demo 01', activeIndex: 11, goTo: '/demo'
+          }, {
+            name: 'Demo 02', activeIndex: 12, goTo: '/demo'
+          }, {
+            name: 'Demo 03', activeIndex: 13, goTo: '/demo'
+          }, {
+            name: 'Demo 04', activeIndex: 14, goTo: '/demo'
+          },{
+            name: 'Demo 05', activeIndex: 15, goTo: '/demo'
+          },
+        ]
       }, {
         name: 'NEWS',
         goTo: '/news',
@@ -95,6 +118,7 @@ function Header(props) {
 
   return (
     <>
+      <div className="topnav-spacer"></div>
       <nav className={`topnav ${offsetY > 50? 'sticky': ''}`}>
         <div className="container">
           <div className="topnav-wrapper">
@@ -148,41 +172,43 @@ function Header(props) {
           </div>
         </div>
       </nav>
-      <div className="topnav-spacer"></div>
 
       <nav className={`sidenav ${isSidenavActive? 'active': ''}`}>
         <div className="wrapper">
-          <div className="text-right">
-          <X size={40} onClick={onToggleSidenav} className="m-6 bg-p color-white" />        
+          <div className="sidenav-toggle" onClick={onToggleSidenav}>
+            <div className={`hamburger ${isSidenavActive? 'active': ''}`}>
+              <div></div><div></div><div></div>
+            </div>
           </div>
-        
-          <div className="menu-container ml-6 pl-6">
-            {menu.map((d, i) => (
-              <div 
-                key={`menu_${i}`} 
-                className={`menu ${d.activeIndexes.indexOf(props.activeIndex) > -1? 'active': ''}`} 
-              >
-                {d.goTo? (
-                  <Link to={d.goTo}>{d.name}</Link>
-                ): (
-                  <div>{d.name}</div>
-                )}
-                {d.children && d.children.length? (
-                  <div className="dropdown">
-                    <div className="submenu-container">
-                      {d.children.map((k, j) => (
-                        <div 
-                          key={`submenu_${i}_${j}`} 
-                          className={`submenu ${k.activeIndex === props.activeIndex? 'active': ''}`} 
-                        >
-                          <Link to={k.goTo}>{k.name}</Link>
-                        </div>
-                      ))}
+          <div className="scroll-wrapper">
+            <div className="menu-container">
+              {menu.map((d, i) => (
+                <div 
+                  key={`menu_${i}`} 
+                  className={`menu ${d.activeIndexes.indexOf(props.activeIndex) > -1? 'active': ''}`} 
+                >
+                  {d.goTo? (
+                    <Link to={d.goTo}>{d.name}</Link>
+                  ): (
+                    <div>{d.name}</div>
+                  )}
+                  {d.children && d.children.length? (
+                    <div className="dropdown">
+                      <div className="submenu-container">
+                        {d.children.map((k, j) => (
+                          <div 
+                            key={`submenu_${i}_${j}`} 
+                            className={`submenu ${k.activeIndex === props.activeIndex? 'active': ''}`} 
+                          >
+                            <Link to={k.goTo}>{k.name}</Link>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ): (<></>)}
-              </div>
-            ))}
+                  ): (<></>)}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </nav>

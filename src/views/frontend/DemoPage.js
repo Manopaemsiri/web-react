@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { onMounted } from '../../helpers/frontend';
 
 import { connect } from 'react-redux';
 import { setTopnavActiveIndex } from '../../actions/general.actions';
@@ -8,7 +9,7 @@ import { setTopnavActiveIndex } from '../../actions/general.actions';
 function DemoPage(props) {
 
   /* eslint-disable */
-	useEffect(() => { props.setTopnavActiveIndex(11); }, []);
+	useEffect(() => { onMounted(true); props.setTopnavActiveIndex(11); }, []);
   /* eslint-enable */
 
   return (
