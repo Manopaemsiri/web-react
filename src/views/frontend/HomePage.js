@@ -232,7 +232,7 @@ function HomePage(props) {
         <div className="bg-filter" style={{ background: 'rgba(0,0,0,0)' }}></div>
         <div className="container pos-relative">
           <div className="ss-text-wrapper lg text-center color-white">
-            <h2 className="fw-600">
+            <h2 className="fw-600 color-white">
               Netka 's ITOM Solutions, Who we are
             </h2>
             <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
