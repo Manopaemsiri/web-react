@@ -58,15 +58,15 @@ function Header(props) {
         activeIndexes: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         children: [
           {
-            name: 'Demo 01', activeIndex: 11, goTo: '/demo'
+            name: 'Demo 01', activeIndex: 11, goTo: '/services'
           }, {
-            name: 'Demo 02', activeIndex: 12, goTo: '/demo'
+            name: 'Demo 02', activeIndex: 12, goTo: '/services'
           }, {
-            name: 'Demo 03', activeIndex: 13, goTo: '/demo'
+            name: 'Demo 03', activeIndex: 13, goTo: '/services'
           }, {
-            name: 'Demo 04', activeIndex: 14, goTo: '/demo'
+            name: 'Demo 04', activeIndex: 14, goTo: '/services'
           },{
-            name: 'Demo 05', activeIndex: 15, goTo: '/demo'
+            name: 'Demo 05', activeIndex: 15, goTo: '/services'
           },
         ]
       }, {

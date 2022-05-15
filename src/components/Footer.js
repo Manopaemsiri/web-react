@@ -101,7 +101,8 @@ function Footer() {
         </section>
       </nav>
 
-      <div className="icon-bar">
+   
+     {/* <div className="icon-bar">
         <a href="#" className="facebook">
           <i className="fa fa-facebook"></i>
         </a>
@@ -117,7 +118,7 @@ function Footer() {
         <a href="#" className="youtube">
           <i className="fa fa-youtube"></i>
         </a>
-      </div>
+  </div> */}
     </>
   );
 }

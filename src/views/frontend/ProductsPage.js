@@ -31,11 +31,14 @@ function ProductsPage(props) {
         <div className="container">
           <h2 className="text-center color-s">Netka AIOps Director</h2>
           <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
-          <h3 className="mt-6 pt-6 color-dark">What Is Netka AIOps Director?</h3>
+          <h3 className="mt-6 pt-6 color-dark">
+            What Is Netka AIOps Director?
+          </h3>
           <p className="color-gray mt-2">
             Netka AIOps Director or N-AIOps is AIOps Platform which provides
-            data  ingestion <br/>data analytics by using AI technologies and
-            intelligently drive automation
+            data ingestion <br />
+            data analytics by using AI technologies and intelligently drive
+            automation
           </p>
           <div className="grids mt-5">
             <div className="grid md-50 sm-100">
@@ -67,8 +70,10 @@ function ProductsPage(props) {
                 </ol>
               </div>
             </div>
-            <div className="grid md-50 sm-100 d-flex ai-center">
-              <img src="/assets/img/bg/21.jpg" className="img" />
+            <div className="grid md-50 sm-100 ">
+              <div className="d-flex ai-center">
+                <img src="/assets/img/bg/21.jpg" className="img" />
+              </div>
             </div>
           </div>
         </div>
@@ -76,7 +81,9 @@ function ProductsPage(props) {
 
       <section className="section-padding">
         <div className="container">
-          <h2 className="text-center color-s">Netka AIOps Director, The Ultimate AIOps Solution</h2>
+          <h2 className="text-center color-s">
+            Netka AIOps Director, The Ultimate AIOps Solution
+          </h2>
           <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
           <div className="mt-6">
             <img src="/assets/img/bg/18.jpg" className="img" />

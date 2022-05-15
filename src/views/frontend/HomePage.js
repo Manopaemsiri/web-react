@@ -46,7 +46,7 @@ function HomePage(props) {
           <div className="ss-text-wrapper text-center">
             <h2 className="fw-600 color-s">ITOM</h2>
             <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
-            <p className="lg color-gray mt-5">
+            <p className="lg mt-5">
               IT operations management (ITOM) is the administrative area involving
               technology infrastructure components and the requirements of
               individual applications, services, storage, networking and
@@ -66,7 +66,7 @@ function HomePage(props) {
           <div className="ss-text-wrapper text-center">
             <h2 className="fw-600 color-s">ITOM Use Case</h2>
             <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
-            <p className="lg color-gray mt-5">
+            <p className="lg mt-5">
               Netka’s ITOM use cases. How to apply Netka’s products and solution
               in your industry
             </p>
@@ -131,7 +131,7 @@ function HomePage(props) {
               <div className="ss-text-wrapper xs text-center">
                 <h2 className="fw-600">Network Management</h2>
                 <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
-                <p className="lg color-gray mt-5">
+                <p className="lg mt-5">
                   The purpose of IT infrastructure management (ITIM) is to provide
                   managing, operation and control of the installed IT
                   infrastructure which generally involve hardware: servers &
@@ -160,7 +160,7 @@ function HomePage(props) {
           <div className="ss-text-wrapper text-center">
             <h2 className="fw-600">Netka's Network Management News</h2>
             <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
-            <p className="lg color-gray mt-5">
+            <p className="lg mt-5">
               Netka News, the activities of Netka System, what we do to our
               customers and public
             </p>
@@ -195,7 +195,7 @@ function HomePage(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h2 className="fw-600 color-s">
+            <h2 className="fw-600">
               Netka 's Network Management Testimonials
             </h2>
             <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>

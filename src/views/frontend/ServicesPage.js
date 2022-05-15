@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { setTopnavActiveIndex } from '../../actions/general.actions';
 
 
-function DemoPage(props) {
+function ServicesPage(props) {
 
   /* eslint-disable */
 	useEffect(() => { onMounted(true); props.setTopnavActiveIndex(11); }, []);
@@ -271,4 +271,4 @@ const mapStateToProps = (state) => ({
 
 export default connect(mapStateToProps, {
   setTopnavActiveIndex: setTopnavActiveIndex
-})(DemoPage);
+})(ServicesPage);
