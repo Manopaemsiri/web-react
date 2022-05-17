@@ -131,5 +131,8 @@ nav.sidenav .submenu.active > *:first-child{color:var(--color-p);}
 .section-01 .arrow{background:rgba(255,255,255,.5); color:#555555;}
 .section-01 .arrow:hover{background:rgba(255,255,255,1); color:#242424;}
 
+/* Section Products 04 */
+.section-pro-04 .chevron{color:var(--color-p);}
+
 /* Section News 01 */
-.section-news-01 {background-color:var(--color-p)}
+.section-news-01 {background-color:var(--color-p);}

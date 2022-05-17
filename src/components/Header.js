@@ -75,11 +75,11 @@ function Header(props) {
         activeIndexes: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
         children: [
           {
-            name: 'Demo 01', activeIndex: 21, goTo: '/products'
+            name: 'Products 01', activeIndex: 21, goTo: '/products'
           }, {
-            name: 'Demo 02', activeIndex: 22, goTo: '/demo'
+            name: 'Products 02', activeIndex: 22, goTo: '/products02'
           }, {
-            name: 'Demo 03', activeIndex: 23, goTo: '/demo'
+            name: 'Products 03', activeIndex: 23, goTo: '/products03'
           }, {
             name: 'Demo 04', activeIndex: 24, goTo: '/demo'
           },{
@@ -90,19 +90,6 @@ function Header(props) {
         name: 'TESTIMONIALS',
         goTo: '/testimonials',
         activeIndexes: [31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
-        children: [
-          {
-            name: 'Demo 01', activeIndex: 11, goTo: '/demo'
-          }, {
-            name: 'Demo 02', activeIndex: 12, goTo: '/demo'
-          }, {
-            name: 'Demo 03', activeIndex: 13, goTo: '/demo'
-          }, {
-            name: 'Demo 04', activeIndex: 14, goTo: '/demo'
-          },{
-            name: 'Demo 05', activeIndex: 15, goTo: '/demo'
-          },
-        ]
       }, {
         name: 'NEWS',
         goTo: '/news',
@@ -110,7 +97,14 @@ function Header(props) {
       }, {
         name: 'COMPANY',
         goTo: '/company',
-        activeIndexes: [51, 52, 53, 54, 55, 56, 57, 58, 59, 60]
+        activeIndexes: [51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
+        children: [
+          {
+            name: 'About Us', activeIndex: 51, goTo: '/about'
+          }, {
+            name: 'Contact Us', activeIndex: 52, goTo: '/contact'
+          }
+        ]
       },
     ]);
   }, []);

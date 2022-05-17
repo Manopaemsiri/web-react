@@ -71,15 +71,31 @@
 }
 .section-pro-02 {font-size:2.5rem;}
 
+/* Section Product 03 */
+.section-pro-03 h1 {font-size:3.4375rem;}
+.section-pro-03 {
+  position:relative; min-height:500px; background-attachment: fixed;
+  background-size:cover; background-repeat:no-repeat; background-position:center;
+}
+
+/* Section Product 04 */
+.section-pro-04 ul {list-style-type:none; padding-left:0;}
+
+
 /* Right content */
 .right-content ul {list-style-type: none;}
 .right-content .contact-container p {color: var(--color-white);}
 .right-content .contact-container p:first-child {color: var(--color-white);}
 
 
+/* Section Testimonials */ 
+
 
 /* Section News 01 */
 .section-news-01 {min-height:200px;}
+@media screen and (max-width:575.98px){
+  h4, a.h6 {font-size: 1rem !important; }
+}
 
 
 

@@ -6,7 +6,11 @@ import {
   Services_HomePage,
   Frontend_HomePage,
   Products_HomePage,
-  News_HomePage
+  Products_Page02,
+  Products_Page03,
+  News_HomePage,
+  CompanyAbout_Page,
+  Testimonials_Page
 } from './views/frontend';
 
 
@@ -18,7 +22,11 @@ function App() {
         <Route exact path="/" component={Frontend_HomePage} />
         <Route exact path="/services" component={Services_HomePage} />
         <Route exact path="/products" component={Products_HomePage} />
+        <Route exact path="/products02" component={Products_Page02}></Route>
+        <Route exact path="/products03" component={Products_Page03}></Route>
         <Route exact path="/news" component={News_HomePage} />
+        <Route exact path="/about" component={CompanyAbout_Page}></Route>
+        <Route exact path="/testimonials" component={Testimonials_Page}></Route>
         <Route path="*" component={Frontend_HomePage} />
       </Switch>
       <Footer />
