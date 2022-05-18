@@ -11,7 +11,7 @@ function NewsPage(props) {
   /* eslint-disable */
   useEffect(() => {
     onMounted(true);
-    props.setTopnavActiveIndex(21);
+    props.setTopnavActiveIndex(41);
   }, []);
   /* eslint-enable */
 

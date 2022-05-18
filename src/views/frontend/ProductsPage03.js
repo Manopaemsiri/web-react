@@ -11,7 +11,7 @@ function ProductsPage03(props) {
   /* eslint-disable */
   useEffect(() => {
     onMounted(true);
-    props.setTopnavActiveIndex(21);
+    props.setTopnavActiveIndex(23);
   }, []);
   /* eslint-enable */
 

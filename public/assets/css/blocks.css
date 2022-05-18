@@ -30,7 +30,6 @@
   .section-01 .arrow > svg{transform:scale(.8);}
 }
 
-
 /* Section 02 */
 .section-02{padding:1rem 0;}
 .section-02 .btn-wrapper{text-align:right;}
@@ -38,7 +37,6 @@
   .section-02 .text-wrapper, .section-02 .btn-wrapper{text-align:center;}
   .section-02 .btn-wrapper{margin:1rem 0 0 0;}
 }
-
 
 /* Section 03 */
 @media screen and (max-width:991.98px){
@@ -54,8 +52,6 @@
   background-size:cover; background-repeat:no-repeat; background-position:center;
 }
 .section-09 > .bg-filter{position:absolute; top:0; bottom:0; left:0; right:0;}
-
-
 
 /* Section Product 01 */
 .section-pro-01{
@@ -81,15 +77,10 @@
 /* Section Product 04 */
 .section-pro-04 ul {list-style-type:none; padding-left:0;}
 
-
 /* Right content */
 .right-content ul {list-style-type: none;}
 .right-content .contact-container p {color: var(--color-white);}
 .right-content .contact-container p:first-child {color: var(--color-white);}
-
-
-/* Section Testimonials */ 
-
 
 /* Section News 01 */
 .section-news-01 {min-height:200px;}
@@ -97,10 +88,15 @@
   h4, a.h6 {font-size: 1rem !important; }
 }
 
+/* Section Company 01 */
+.section-company-02-01 {min-height:200px;}
 
 
+/* Section Company 02 */
+.section-company-02-02 ul {list-style-type:none; padding-left:0;}
 
 
+.form-control input {display: block; border-radius: 4px;padding: 10px; font-size: 14px; width: 100%;}
 
 
 

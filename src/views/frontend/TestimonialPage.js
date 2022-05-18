@@ -11,7 +11,7 @@ function TestimonialsPage(props) {
   /* eslint-disable */
   useEffect(() => {
     onMounted(true);
-    props.setTopnavActiveIndex(21);
+    props.setTopnavActiveIndex(31);
   }, []);
   /* eslint-enable */
 
