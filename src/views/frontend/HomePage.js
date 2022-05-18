@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import SpecialImage from '../../components/SpecialImage';
 import { Clock } from 'react-feather';
 import { onMounted } from '../../helpers/frontend';
 
 import SectionBanner from '../../components/SectionBanner';
+import SpecialImage from '../../components/SpecialImage';
+import TextTitle from '../../components/TextTitle';
 
 import { connect } from 'react-redux';
 import { setTopnavActiveIndex } from '../../actions/general.actions';
@@ -44,8 +45,7 @@ function HomePage(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h2 className="fw-600 color-s">ITOM</h2>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
+            <TextTitle title="ITOM" />
             <p className="lg mt-5">
               IT operations management (ITOM) is the administrative area involving
               technology infrastructure components and the requirements of
@@ -64,8 +64,7 @@ function HomePage(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h2 className="fw-600 color-s">ITOM Use Case</h2>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
+            <TextTitle title="ITOM Use Case" />
             <p className="lg mt-5">
               Netka’s ITOM use cases. How to apply Netka’s products and solution
               in your industry
@@ -102,8 +101,7 @@ function HomePage(props) {
           <div className="grids ai-center">
             <div className="grid lg-50 sm-100 mt-0">
               <div className="ss-text-wrapper xs text-center">
-                <h2 className="fw-600 color-white">AIOps</h2>
-                <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
+                <TextTitle title="AIOps" colorClasser="color-white" />
                 <p className="lg color-white op-80 mt-5">
                   AIOps, or Artificial Intelligence for IT Operations, is the next
                   generation of IT operations analytics.
@@ -129,8 +127,7 @@ function HomePage(props) {
           <div className="grids ai-center">
             <div className="grid lg-50 sm-100 mt-0">
               <div className="ss-text-wrapper xs text-center">
-                <h2 className="fw-600">Network Management</h2>
-                <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
+                <TextTitle title="Network Management" />
                 <p className="lg mt-5">
                   The purpose of IT infrastructure management (ITIM) is to provide
                   managing, operation and control of the installed IT
@@ -158,8 +155,7 @@ function HomePage(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h2 className="fw-600">Netka's Network Management News</h2>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
+            <TextTitle title="Netka's Network Management News" />
             <p className="lg mt-5">
               Netka News, the activities of Netka System, what we do to our
               customers and public
@@ -195,10 +191,7 @@ function HomePage(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h2 className="fw-600">
-              Netka 's Network Management Testimonials
-            </h2>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
+            <TextTitle title="Netka 's Network Management Testimonials" />
           </div>
           <div className="grids pt-1">
             {[
@@ -226,16 +219,16 @@ function HomePage(props) {
       </section>
 
       <section 
-        className="section-09 section-padding" 
+        className="section-05 bg-sm bg-fixed section-padding" 
         style={{ backgroundImage: `url('/assets/img/bg/06.jpg')` }}
       >
         <div className="bg-filter" style={{ background: 'rgba(0,0,0,0)' }}></div>
-        <div className="container pos-relative">
+        <div className="container">
           <div className="ss-text-wrapper lg text-center color-white">
-            <h2 className="fw-600 color-white">
-              Netka 's ITOM Solutions, Who we are
-            </h2>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-2"></div>
+            <TextTitle 
+              title="Netka 's ITOM Solutions, Who we are" 
+              colorClasser="color-white" 
+            />
             <p className="lg op-70 mt-5">
               Netka, an expertized Independent Software Vendor (ISV),
               exceptionally in developing software for network management. Our

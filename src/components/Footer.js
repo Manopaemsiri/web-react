@@ -3,102 +3,123 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <>
-      <nav className="footer bg-s">
-        <footer className="section-footer section-padding">
+      <nav className="footer">
+        <div className="section-padding bg-s">
           <div className="container">
-            <div className="grids">
-              <div className="grid md-25">
-                <div className="footer-logo">
-                  <img
-                    src="https://techorigin.co.th/public/_uploads/08082020201318812300.png"
-                     width="170"
-                  />
-                </div>
-                <div className="footer-cert mt-5">
-                  <h4 className="color-gray">OUR CERTIFICATION</h4>
-                  <br/>
-                  <img src="https://netkasystem.com/wp-content/uploads/2019/09/cmmi-2021-netka.png" /><br /><br />
-                  <img src="https://netkasystem.com/wp-content/uploads/2019/09/pink-01.png"width="175"/>
-                </div>
-              </div>
-              <div className="grid md-25">
-                <h4 className="color-gray">Netka System Co.,Ltd</h4>
-                <p className="mt-4">
-                  1 Soi Ramkhamhaeng 166 Yaek 2 Ramkhamhaeng Rd. Khwang Minburi,
-                  Khet Minburi, Bangkok Thailand
+            <div className="grids jc-space-between">
+
+              <div className="grid xl-25 lg-30 sm-100 mt-0">
+                <Link className="logo" to="/">
+                  <img src="/assets/img/logo.png" />
+                </Link>
+                <p className="fw-300 mt-4">
+                  1 Soi Ramkhamhaeng 166 Yaek 2 <br />
+                  Ramkhamhaeng Rd., Minburi <br />
+                  Bangkok 10510 Thailand
                 </p>
-                <p>662-978-6805, 662-517-4993-4</p>
-                <p>contact@netkasystem.com</p>
-                <h4 className="color-gray mt-4">WORKING HOURS</h4>
-                <p className="mt-4">Monday - Friday</p>
-                <p>From 9:00 - 18:00 hrs.</p>
+                <p className="fw-300 mt-2">
+                  Phone. 662-978-6805
+                </p>
+                <p className="fw-300 mt-2">
+                  Email. contact@techorigin.co.th
+                </p>
               </div>
-              <div className="grid md-25">
-                <h4 className="color-gray">NAVIGATION</h4>
-                <div className="footer_nav_link d-flex jc-space-between">
-                  <div className="md-50">
-                    <ul className="p-0">
-                      <li>
-                        <Link to="">Home</Link>
-                      </li>
-                      <li>
-                        <Link to="">Support</Link>
-                      </li>
-                      <li>
-                        <Link to="">About Us</Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="md-50">
-                    <ul>
-                      <li>
-                        <Link to="/">Testimonial</Link>
-                      </li>
-                      <li>
-                        <Link to="">News</Link>
-                      </li>
-                    </ul>
+
+              <div className="grid lg-50 sm-100 mt-0">
+                <div className="menu-container">
+                  <div className="grids">
+                    <div className="grid sm-1-3 mt-0">
+                      <p className="lg fw-500 menu-title">NAVIGATION</p>
+                      <div className="grids pt-1">
+                        {[
+                          { name: 'Home', goTo: '' },
+                          { name: 'Services', goTo: '' },
+                          { name: 'Products', goTo: '' },
+                          { name: 'Testimonials', goTo: '' },
+                          { name: 'News', goTo: '' },
+                          { name: 'Company', goTo: '' },
+                        ].map((d, i) => (
+                          <div key={`fmenu_0_${i}`} className="grid sm-100 xs-50 mt-2">
+                            <Link to={d.goTo} className="p sm fw-500 h-color-p">
+                              {d.name}
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="grid sm-1-3 mt-0">
+                      <p className="lg fw-500 menu-title">SERVICES</p>
+                      <div className="grids pt-1">
+                        {[
+                          { name: 'Service 01', goTo: '' },
+                          { name: 'Service 02', goTo: '' },
+                          { name: 'Service 03', goTo: '' },
+                          { name: 'Service 04', goTo: '' },
+                          { name: 'Service 05', goTo: '' },
+                          { name: 'Service 06', goTo: '' },
+                        ].map((d, i) => (
+                          <div key={`fmenu_1_${i}`} className="grid sm-100 xs-50 mt-2">
+                            <Link to={d.goTo} className="p sm fw-500 h-color-p">
+                              {d.name}
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="grid sm-1-3 mt-0">
+                      <p className="lg fw-500 menu-title">PRODUCTS</p>
+                      <div className="grids pt-1">
+                        {[
+                          { name: 'Product 01', goTo: '' },
+                          { name: 'Product 02', goTo: '' },
+                          { name: 'Product 03', goTo: '' },
+                          { name: 'Product 04', goTo: '' },
+                          { name: 'Product 05', goTo: '' },
+                          { name: 'Product 06', goTo: '' },
+                        ].map((d, i) => (
+                          <div key={`fmenu_2_${i}`} className="grid sm-100 xs-50 mt-2">
+                            <Link to={d.goTo} className="p sm fw-500 h-color-p">
+                              {d.name}
+                            </Link>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <h4 className="color-gray">PRODUCTS</h4>
-                <div className="footer_nav_link d-flex jc-space-between">
-                  <div className="footer_link_item md-50">
-                    <ul className="p-0">
-                      <li>
-                        <Link to="/">Netka AIOps</Link>
-                      </li>
-                      <li>
-                        <Link to="/">NetkaView Logger NetkaView Network Manager X</Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="md-50">
-                    <ul>
-                      <li>
-                        <Link to="/">NetkaView Logger</Link>
-                      </li>
-                      <li>
-                        <Link to="/">NetkaQuartz Service Desk</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </div>
-              <div className="grid md-25">
+
+              <div className="grid xl-25 lg-20 md-40 sm-60 xs-90 mt-0">
                 <form className="form">
-                  <label>Email</label><br/>
-                  <input type="text" />
-                  <input type="submit" value="SUBSCRIBE" />
-                  <p>Get latest updates and offers.</p>
+                  <div className="form-control">
+                    <input 
+                      type="email" className="text-center" required={true} 
+                      placeholder="Your Email" 
+                    />
+                  </div>
+                  <div className="mt-1">
+                    <button type="submit" className="btn btn-action btn-xs btn-p-inverse w-full">
+                      SUBSCRIBE
+                    </button>
+                  </div>
+                  <p className="fw-300 mt-2">
+                    Get our latest updates.
+                  </p>
                 </form>
               </div>
+
             </div>
           </div>
-        </footer>
-
-        <section className="section-copyright text-center bg-white">
-          <p>Copyright &copy; 2022 Tech Origin Co., Ltd.</p>
-        </section>
+        </div>
+        <div className="text-center bg-white pt-6 pb-6">
+          <div className="container">
+            <p className="color-dark">
+              Copyright &copy; 2022 Tech Origin Co., Ltd.
+              <br className="all-hide xs-show" />
+              All rights reserved.
+            </p>
+          </div>
+        </div>
       </nav>
 
    

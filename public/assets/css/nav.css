@@ -91,14 +91,14 @@ nav.sidenav .submenu > *:first-child{
 
 
 /* Footer */
-.section-footer {background:var(--footer-bg);}
-.section-footer .footer_cert-title, .section-footer .footer_address-title,
-.section-footer .footer_working_time-title,.section-footer .footer_nav_title,
-.section-footer .footer_product_title {color:#80939D !important; margin-bottom:1rem; font-size: 1rem;}
-.section-footer p {font-size:0.8rem !important; color:#FFFFFF;}
-.section-footer ul {list-style: none; color:#FFFFFF; font-size: 0.9rem; min-height:120px; padding-right:1rem;}
-.section-footer .form label {color:#80939D;}
-.section-footer .form input[type="submit"] {background:#E5452B; margin-top:1rem; color:#FFFFFF; margin-bottom:2rem;}
+nav.footer .logo > img{display:block; width:100%; max-width:13rem; height:auto;}
+@media screen and (max-width:991.98px){
+  nav.footer .menu-container{padding:2.5rem 0;}
+}
+@media screen and (max-width:991.98px){
+  nav.footer .menu-container{padding:.5rem 0 2.5rem 0;}
+  nav.footer .menu-title{margin:2rem 0 0 0;}
+}
 
 
 /* Social Bar */

@@ -62,35 +62,50 @@ select, textarea, button{font-family:'Roboto', sans-serif;}
 /* Typography */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .p,
 label{margin:0; font-weight:var(--fw); line-height:var(--lh);}
+h1, .h1{font-size:3.5rem;}
 h2, .h2{font-size:2.5rem;}
 h3, .h3{font-size:1.75rem;} 
 h4, .h4{font-size:1.5rem;} 
 h5, .h5{font-size:1.4375rem;}
 h6, .h6{font-size:1.125rem;}
-p, .p, label{font-size: 1rem;}
-p.lg, .p.lg, label.lg{font-size:1.125rem;}
-/* p.sm, .p.sm, label.sm{font-size:.9375rem;}
-p.xs, .p.xs, label.xs{font-size:.875rem;}
-p.xxs, .p.xxs, label.xxs{font-size:.8125rem;}
-p.xxxs, .p.xxxs, label.xxxs{font-size:.75rem;} */
+p, .p, label, li{font-size:1rem;}
+p.lg, .p.lg, label.lg, li.lg{font-size:1.125rem;}
+p.sm, .p.sm, label.sm, li.sm{font-size:.9375rem;}
+p.xs, .p.xs, label.xs, li.xs{font-size:.875rem;}
 @media screen and (max-width:1199.98px){
+	h1, .h1{font-size:3.1875rem;}
 	h2, .h2{font-size:2.375rem;}
 }
 @media screen and (max-width:991.98px){
+	h1, .h1{font-size:2.875rem;}
 	h2, .h2{font-size:2.125rem;}
 	h5, .h5{font-size:1.375rem;}
 	h6, .h6{font-size:1.1875rem;}
 	p.lg, .p.lg, label.lg{font-size:1.0625rem;}
 }
 @media screen and (max-width:767.98px){
+	h1, .h1{font-size:2.5625rem;}
 	h2, .h2{font-size:1.875rem;}
 	h5, .h5{font-size:1.3125rem;}
 	h6, .h6{font-size:1.125rem;}
 }
 @media screen and (max-width:575.98px){
+	h1, .h1{font-size:2.25rem;}
 	h2, .h2{font-size:1.75rem;}
 	h5, .h5{font-size:1.1875rem;}
-	p.lg, .p.lg, label.lg{font-size:1rem;}
+	p.lg, .p.lg, label.lg, li.lg{font-size:1rem;}
+}
+
+
+/* Ordered List & Unordered List */
+ol, ul{padding:0 0 0 1.125rem; margin:0;}
+ol li, ul li{padding:0 0 0 .5rem; margin:.25rem 0 0 0;}
+ul{list-style:square;}
+ol{list-style:none; counter-reset:item;}
+ol > li{position:relative;}
+ol > li:before{
+	content:counters(item, '.') ' '; counter-increment:item;
+	position:absolute; top:0; left:-1.125rem;
 }
 
 
@@ -133,13 +148,13 @@ p.xxxs, .p.xxxs, label.xxxs{font-size:.75rem;} */
 input[type=text], input[type=email], input[type=password], input[type=date], input[type=tel],
 input[type=number], input[type=phone], input[type=submit], input[type=file], input[type=time],
 select, textarea{
-  width:100%; border:1.5px solid transparent; border-radius:.25rem;
-  padding:.375rem .625rem; font-size:.9375rem; margin:0; outline:none;
+  width:100%; border:1.5px solid transparent; border-radius:0;
+  padding:.5rem .75rem; font-size:1rem; margin:0; outline:none;
   font-weight:var(--fw); line-height:var(--lh); box-shadow:none;
   transition:border-color .25s, color .25s;
 }
-input[type=time]{padding:.3125rem .625rem;}
-select{padding:.475rem .625rem;}
+input[type=time]{padding:.4375rem .75rem;}
+select{padding:.6rem .75rem;}
 
 input[type=text].lg, input[type=email].lg, input[type=password].lg, input[type=date].lg,
 input[type=tel].lg, input[type=number].lg, input[type=phone].lg, input[type=submit].lg,
@@ -356,19 +371,24 @@ fieldset{width:100%; padding:0; margin:0; border:0;}
 
 /* Map Container */
 .map-container{
-	position:relative; display:block; width:100%; height:23rem;
-	overflow:hidden; border-radius:.25rem;
+	position:relative; display:block; width:100%; height:30rem; overflow:hidden;
 }
-.map-container > .wrapper{display:block; width:100%; height:100%;}
-.map-container .btn-container{position:absolute; top:.5rem; left:.5rem; z-index:1;}
+.map-container > .map-wrapper{position:relative; display:block; width:100%; height:100%;}
+.map-container .map-iframe{
+	position:absolute; top:0; bottom:0; left:0; right:0; border:0; z-index:1;
+	width:100%; height:100%;
+}
+@media screen and (max-width:1199.98px){
+	.map-container{height:28rem;}
+}
 @media screen and (max-width:991.98px){
-	.map-container{height:21rem;}
+	.map-container{height:26rem;}
 }
 @media screen and (max-width:767.98px){
-	.map-container{height:19rem;}
+	.map-container{height:23rem;}
 }
 @media screen and (max-width:575.98px){
-	.map-container{height:17rem;}
+	.map-container{height:20rem;}
 }
 
 /* Map Marker */
@@ -500,6 +520,8 @@ fieldset{width:100%; padding:0; margin:0; border:0;}
 /* Specia Separation */
 .ss-sep-01{display:block; width:100%; max-width:4rem; height:.15rem;}
 .ss-sep-01.ss-sep-center{margin-left:auto; margin-right:auto;}
+.ss-sep-01.ss-sep-full{max-width:100%;}
+.ss-sep-01.ss-sep-thin{height:.125rem;}
 
 
 /* Special Tag */
@@ -513,6 +535,7 @@ fieldset{width:100%; padding:0; margin:0; border:0;}
 /* Special Text Wrapper */
 .ss-text-wrapper{display:block; width:100%; max-width:52rem; margin:0 auto;}
 .ss-text-wrapper.lg{max-width:62rem;}
+.ss-text-wrapper.sm{max-width:38rem;}
 .ss-text-wrapper.xs{max-width:33rem;}
 
 
@@ -686,7 +709,16 @@ table.table .table-img.sm img{max-width:4.5rem; max-height:3rem;}
 .bradius-4{border-radius:16px!important;}
 .bradius-round{border-radius:1000em!important;}
 
-.box-shadow{box-shadow:rgb(0 0 0 / 7%) 0px 10px 20px;}
+.box-shadow{box-shadow:rgb(0 0 0 / 3%) 0px 7px 14px;}
+
+.text-2xs{font-size:70%;}
+.text-xs{font-size:80%;}
+.text-sm{font-size:90%;}
+.text-nm{font-size:100%;}
+.text-md{font-size:110%;}
+.text-lg{font-size:120%;}
+.text-xl{font-size:130%;}
+.text-2xl{font-size:140%;}
 
 .ovf-hidden{overflow:hidden!important;}
 .ovf-visible{overflow:visible!important;}
@@ -707,6 +739,7 @@ table.table .table-img.sm img{max-width:4.5rem; max-height:3rem;}
 
   .lg-no-br > br{display:none;}
   .lg-hide{display:none;}
+  .lg-show{display:block;}
 }
 @media screen and (max-width:991.98px){
 	.md-text-center{text-align:center!important;}
@@ -715,6 +748,7 @@ table.table .table-img.sm img{max-width:4.5rem; max-height:3rem;}
 
   .md-no-br > br{display:none;}
   .md-hide{display:none;}
+  .md-show{display:block;}
 }
 @media screen and (max-width:767.98px){
 	.sm-text-center{text-align:center!important;}
@@ -723,6 +757,7 @@ table.table .table-img.sm img{max-width:4.5rem; max-height:3rem;}
 
   .sm-no-br > br{display:none;}
   .sm-hide{display:none;}
+  .sm-show{display:block;}
 	
 	.sm-ws-unset{white-space:unset!important;}
 }
@@ -733,7 +768,7 @@ table.table .table-img.sm img{max-width:4.5rem; max-height:3rem;}
 
   .xs-no-br > br{display:none;}
   .xs-hide{display:none;}
-  .xs-hide{display:none;}
+  .xs-show{display:block;}
 	
 	.xs-ws-unset{white-space:unset!important;}
 }

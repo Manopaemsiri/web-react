@@ -2,8 +2,12 @@ import { useEffect } from "react";
 import { onMounted } from "../../helpers/frontend";
 import { Link } from "react-router-dom";
 
+import SpecialImage from '../../components/SpecialImage';
+import TextTitle from '../../components/TextTitle';
+
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
+
 
 function ProductsPage(props) {
   /* eslint-disable */
@@ -16,35 +20,37 @@ function ProductsPage(props) {
   return (
     <>
       <section
-        className="section-pro-01 section-padding d-flex ai-center jc-center"
+        className="section-05 bg-fixed section-padding"
         style={{ backgroundImage: `url('/assets/img/bg/17.jpg')` }}
       >
         <div className="container">
-          <h1 className="color-white fw-800 text-center">
-            Netka AIOps Director <br />
-            The Ultimate AIOps Solution
-          </h1>
+          <div className="ss-text-wrapper text-center">
+            <h1 className="color-white fw-700 lh-sm xs-no-br">
+              Netka AIOps Director <br />
+              The Ultimate AIOps Solution
+            </h1>
+          </div>
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-03 section-padding">
         <div className="container">
-          <h2 className="text-center color-s">Netka AIOps Director</h2>
-          <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
-          <h3 className="mt-6 pt-6 color-dark">
-            What Is Netka AIOps Director?
-          </h3>
-          <p className="color-gray mt-2">
-            Netka AIOps Director or N-AIOps is AIOps Platform which provides
-            data ingestion <br />
-            data analytics by using AI technologies and intelligently drive
-            automation
-          </p>
-          <div className="grids mt-5">
-            <div className="grid md-50 sm-100">
-              <div className="pr-6">
-                <h3>Overview</h3>
-                <p className="color-gray mt-2">
+          <TextTitle title="Netka AIOps Director" />
+          <div className="ss-text-wrapper sm ml-0">
+            <h3 className="mt-6 pt-4">
+              What Is Netka AIOps Director?
+            </h3>
+            <p className="color-gray mt-2 mb-4">
+              Netka AIOps Director or N-AIOps is AIOps Platform which provides
+              data ingestion data analytics by using AI technologies and 
+              intelligently drive automation
+            </p>
+          </div>
+          <div className="grids ai-center pt-6">
+            <div className="grid lg-50 sm-100 mt-0">
+              <div className="ss-text-wrapper xs color-gray text-left ml-0">
+                <h3 className="color-s">Overview</h3>
+                <p className="mt-2">
                   Netka AIOps Director or N-AIOps is AIOps Platform which
                   provides data ingestion, data analytics by using AI
                   technologies and intelligently drive automation. N-AIOps have
@@ -55,7 +61,7 @@ function ProductsPage(props) {
                   cross-domain analysis and drive automation. N-AIOps supports
                   data for processing as follow:
                 </p>
-                <ol className="color-gray pl-6">
+                <ol>
                   <li>Log data e.g. Syslog, SNMP Trap, Windows event</li>
                   <li>Telemetry data e.g. metrics, traces</li>
                   <li>
@@ -70,9 +76,9 @@ function ProductsPage(props) {
                 </ol>
               </div>
             </div>
-            <div className="grid md-50 sm-100 ">
-              <div className="d-flex ai-center">
-                <img src="/assets/img/bg/21.jpg" className="img" />
+            <div className="grid lg-50 sm-100 mt-0">
+              <div className="img-wrapper">
+                <SpecialImage image="/assets/img/bg/21.jpg" classer="no-hover" />
               </div>
             </div>
           </div>
@@ -81,11 +87,8 @@ function ProductsPage(props) {
 
       <section className="section-padding">
         <div className="container">
-          <h2 className="text-center color-s">
-            Netka AIOps Director, The Ultimate AIOps Solution
-          </h2>
-          <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
-          <div className="mt-6">
+          <TextTitle title="Netka AIOps Director, The Ultimate AIOps Solution" />
+          <div className="mt-6 pt-2">
             <img src="/assets/img/bg/18.jpg" className="img" />
           </div>
           <p className="mt-6 color-gray">
@@ -136,16 +139,18 @@ function ProductsPage(props) {
         </div>
       </section>
 
-      <section className="section-padding"></section>
-
       <section
-        className="section-pro-02 section-padding d-flex ai-center jc-center"
+        className="section-05 bg-fixed bg-sm section-padding"
         style={{ backgroundImage: `url('/assets/img/bg/23.jpg')` }}
       >
-        <h1 className="color-white text-center">
-          Netka AIOps Director <br />
-          The Ultimate AIOps Solution
-        </h1>
+        <div className="container">
+          <div className="ss-text-wrapper text-center">
+            <h1 className="color-white fw-700 lh-sm xs-no-br">
+              Netka AIOps Director <br />
+              The Ultimate AIOps Solution
+            </h1>
+          </div>
+        </div>
       </section>
 
       <section className="section-padding">

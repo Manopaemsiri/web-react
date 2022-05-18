@@ -8,10 +8,6 @@
 }
 html, body{background:#ffffff; color:#141414;}
 
-/* Typography */
-h2{color:var(--color-s);}
-h3{color:var(--color-dark);}
-p{color:var(--color-gray);}
 
 /* Color */
 .color-black, .h-color-black:hover{color:#000000!important;}
@@ -126,10 +122,17 @@ nav.sidenav .submenu > *:first-child{color:#242424;}
 nav.sidenav .submenu:hover > *:first-child,
 nav.sidenav .submenu.active > *:first-child{color:var(--color-p);}
 
+/* Footer */
+nav.footer{color:#dddddd;}
+nav.footer .menu-title{color:#999999;}
+
 
 /* Section 01 */
 .section-01 .arrow{background:rgba(255,255,255,.5); color:#555555;}
 .section-01 .arrow:hover{background:rgba(255,255,255,1); color:#242424;}
+
+/* Section 04 */
+.section-04 .panel-right > .bg-filter{background:#f1f1f1;}
 
 /* Section Products 04 */
 .section-pro-04 .chevron{color:var(--color-p);}

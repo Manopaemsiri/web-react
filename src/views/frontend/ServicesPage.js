@@ -26,7 +26,7 @@ function ServicesPage(props) {
         </div>
       </section>
 
-      <section className="section-demo-02 section-padding">
+      <section className="section-demo-02 section-padding color-gray">
         <div className="container">
           <div className="grids">
             {/* left content */}
@@ -197,7 +197,7 @@ function ServicesPage(props) {
             {/* right content */}
             <div className="grid md-30 sm-100">
               <div className="right-content">
-                <ul className="bg-p p-5 color-white bx-shadow">
+                <ul className="bg-p p-5 color-white box-shadow">
                   <li>
                     <Link to="/" className="p color-white">
                       What is AIOps?
@@ -230,7 +230,7 @@ function ServicesPage(props) {
                   </li>
                 </ul>
 
-                <div className="bg-s color-white p-5 bx-shadow">
+                <div className="bg-s color-white p-5 box-shadow">
                   <h4>LOREM IPSUM</h4>
                   <div className="contact-container mt-4">
                     <p>Call Us</p>
@@ -250,7 +250,7 @@ function ServicesPage(props) {
                   </div>
                 </div>
 
-                <div className="bg-p color-white p-5 mt-5 bx-shadow">
+                <div className="bg-p color-white p-5 mt-5 box-shadow">
                   <h4>HOW CAN WE HELP YOU ?</h4>
                   <p className="color-white mt-5">
                     Contact us at the Netka System to you or submit a business
