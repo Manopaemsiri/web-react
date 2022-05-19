@@ -17,7 +17,7 @@ function NewsPage(props) {
 
   return (
     <>
-      <section className="section-news-01 d-flex ai-center">
+      <section className="section-06">
         <div className="container">
           <p className="d-flex ai-center text-sm color-white">
             Home <ChevronRight size="15" className="ml-2 mr-2" /> News
