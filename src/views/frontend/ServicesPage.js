@@ -6,6 +6,9 @@ import { ChevronRight } from "react-feather";
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
+import TextTitle from "../../components/TextTitle";
+import SubTitle from "../../components/SubTitle";
+
 function ServicesPage(props) {
   /* eslint-disable */
   useEffect(() => {
@@ -16,9 +19,9 @@ function ServicesPage(props) {
 
   return (
     <>
-      <section className="section-news-01 d-flex ai-center">
+      <section className="section-06">
         <div className="container">
-          <p className="d-flex ai-center text-small color-white">
+          <p className="d-flex ai-center text-sm color-white">
             Home <ChevronRight size="15" className="ml-2 mr-2" /> Services
           </p>
           <h3 className="fw-800 mt-2 color-white">Services</h3>
@@ -29,12 +32,10 @@ function ServicesPage(props) {
       <section className="section-demo-02 section-padding color-gray">
         <div className="container">
           <div className="grids">
-            {/* left content */}
-            <div className="grid md-70 sm-100 pr-6">
-              <div className="left-content">
-                <div className="text-container">
-                  <h2>AIOps</h2>
-                  <div className="ss-sep-01 bg-p mt-4"></div>
+            <div className="grid md-70 sm-100">
+              <div className="panel-left">
+                <div className="ss-text-wrapper">
+                  <TextTitle title="AIOps" isCentered={false}/>
                   <p className="mt-6">
                     Artificial Intelligence for IT Operations (AIOps) describes
                     the combination of big data and machine learning (ML) to
@@ -194,9 +195,8 @@ function ServicesPage(props) {
                 </div>
               </div>
             </div>
-            {/* right content */}
             <div className="grid md-30 sm-100">
-              <div className="right-content">
+              <div className="panel-right">
                 <ul className="bg-p p-5 color-white box-shadow">
                   <li>
                     <Link to="/" className="p color-white">

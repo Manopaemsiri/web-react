@@ -56,19 +56,6 @@ function Header(props) {
         name: 'SERVICES',
         goTo: '/services',
         activeIndexes: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-        children: [
-          {
-            name: 'Demo 01', activeIndex: 11, goTo: '/services'
-          }, {
-            name: 'Demo 02', activeIndex: 12, goTo: '/services'
-          }, {
-            name: 'Demo 03', activeIndex: 13, goTo: '/services'
-          }, {
-            name: 'Demo 04', activeIndex: 14, goTo: '/services'
-          },{
-            name: 'Demo 05', activeIndex: 15, goTo: '/services'
-          },
-        ]
       }, {
         name: 'PRODUCTS',
         goTo: '/products',
@@ -80,11 +67,7 @@ function Header(props) {
             name: 'Products 02', activeIndex: 22, goTo: '/products02'
           }, {
             name: 'Products 03', activeIndex: 23, goTo: '/products03'
-          }, {
-            name: 'Demo 04', activeIndex: 24, goTo: '/demo'
-          },{
-            name: 'Demo 05', activeIndex: 25, goTo: '/demo'
-          },
+          }, 
         ]
       }, {
         name: 'TESTIMONIALS',

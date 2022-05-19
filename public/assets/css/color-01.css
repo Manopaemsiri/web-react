@@ -131,11 +131,24 @@ nav.footer .menu-title{color:#999999;}
 .section-01 .arrow{background:rgba(255,255,255,.5); color:#555555;}
 .section-01 .arrow:hover{background:rgba(255,255,255,1); color:#242424;}
 
+
 /* Section 04 */
 .section-04 .panel-right > .bg-filter{background:#f1f1f1;}
+
+
+/* Section 06 */
+.section-06 {background:var(--color-p);}
+
+
+
+
+
+
+
+
+
+
 
 /* Section Products 04 */
 .section-pro-04 .chevron{color:var(--color-p);}
 
-/* Section News 01 */
-.section-news-01 {background-color:var(--color-p);}

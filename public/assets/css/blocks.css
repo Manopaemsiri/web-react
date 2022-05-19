@@ -93,11 +93,39 @@
 }
 
 
+/* section-06 */
+.section-06{min-height:200px; display:flex; align-items:center;}
+
+
 /* Section 09 */
 .section-09{
   position:relative; min-height:500px;
   background-size:cover; background-repeat:no-repeat; background-position:center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Section Product 03 */

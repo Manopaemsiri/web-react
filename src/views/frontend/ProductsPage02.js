@@ -20,18 +20,16 @@ function ProductsPage02(props) {
   return (
     <>
       <section
-        className="section-pro-03 section-padding d-flex ai-center jc-center"
+        className="section-05 bg-fixed section-padding"
         style={{ backgroundImage: `url('/assets/img/bg/17.jpg')` }}
       >
-        <div
-          className="bg-filter"
-          style={{ background: "rgba(0,0,0,0)" }}
-        ></div>
         <div className="container">
-          <h1 className="color-white fw-800 text-center">
-            Netka AIOps Director <br />
-            The Ultimate AIOps Solution
-          </h1>
+          <div className="ss-text-wrapper text-center">
+            <h1 className="color-white fw-700 lh-sm xs-no-br">
+              Netka AIOps Director <br />
+              The Ultimate AIOps Solution
+            </h1>
+          </div>
         </div>
       </section>
 
@@ -255,7 +253,7 @@ function ProductsPage02(props) {
 
       {/* Parallax Scrolling Effect */}
       <section
-        className="section-pro-02 section-padding d-flex ai-center jc-center"
+        className="section-05 bg-fixed bg-sm"
         style={{ backgroundImage: `url('/assets/img/bg/23.jpg')` }}
       >
         <h1 className="color-white text-center">
