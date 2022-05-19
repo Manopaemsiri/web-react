@@ -2,12 +2,12 @@ import { useEffect } from "react";
 import { onMounted } from "../../helpers/frontend";
 import { Link } from "react-router-dom";
 
-import SpecialImage from '../../components/SpecialImage';
-import TextTitle from '../../components/TextTitle';
+import SpecialImage from "../../components/SpecialImage";
+import TextTitle from "../../components/TextTitle";
+import SubTitle from "../../components/SubTitle";
 
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
-
 
 function ProductsPage(props) {
   /* eslint-disable */
@@ -37,19 +37,17 @@ function ProductsPage(props) {
         <div className="container">
           <TextTitle title="Netka AIOps Director" />
           <div className="ss-text-wrapper sm ml-0">
-            <h3 className="mt-6 pt-4">
-              What Is Netka AIOps Director?
-            </h3>
+            <SubTitle subTitle="What Is Netka AIOps Director?" />
             <p className="color-gray mt-2 mb-4">
               Netka AIOps Director or N-AIOps is AIOps Platform which provides
-              data ingestion data analytics by using AI technologies and 
+              data ingestion data analytics by using AI technologies and
               intelligently drive automation
             </p>
           </div>
           <div className="grids ai-center pt-6">
             <div className="grid lg-50 sm-100 mt-0">
               <div className="ss-text-wrapper xs color-gray text-left ml-0">
-                <h3 className="color-s">Overview</h3>
+                <SubTitle subTitle="Overview"/>
                 <p className="mt-2">
                   Netka AIOps Director or N-AIOps is AIOps Platform which
                   provides data ingestion, data analytics by using AI
@@ -78,7 +76,10 @@ function ProductsPage(props) {
             </div>
             <div className="grid lg-50 sm-100 mt-0">
               <div className="img-wrapper">
-                <SpecialImage image="/assets/img/bg/21.jpg" classer="no-hover" />
+                <SpecialImage
+                  image="/assets/img/bg/21.jpg"
+                  classer="no-hover"
+                />
               </div>
             </div>
           </div>
@@ -87,7 +88,7 @@ function ProductsPage(props) {
 
       <section className="section-padding">
         <div className="container">
-          <TextTitle title="Netka AIOps Director, The Ultimate AIOps Solution" />
+          <TextTitle title="Netka AIOps Director, The Ultimate AIOps Solution"/>
           <div className="mt-6 pt-2">
             <img src="/assets/img/bg/18.jpg" className="img" />
           </div>
@@ -116,7 +117,7 @@ function ProductsPage(props) {
             DEM for cross-domain analysis and drive automation. N-AIOps supports
             data for processing as follow:
           </p>
-          <h3 className="mt-5">The Netka AIOps’s Life Cycle</h3>
+          <SubTitle subTitle="The Netka AIOps’s Life Cycle" isCentered={false} />
           <p className="mt-4 color-gray">
             When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
             ultimate AIOps Solution” which provides cross-domain analysis for IT
@@ -161,7 +162,7 @@ function ProductsPage(props) {
             </div>
 
             <div className="grid md-50 sm-100 pl-6 mt-0">
-              <h3>Sample Use Cases Of N-AIOps</h3>
+              <SubTitle subTitle="Sample Use Cases Of N-AIOps"/>
               <p className="mt-2 color-gray">
                 N-AIOps can start workflow and run playbook into CIs when
                 incoming log matched predefined rule. Also, N-AIOps can detect

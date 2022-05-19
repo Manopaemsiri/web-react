@@ -6,6 +6,8 @@ import SpecialImage from "../../components/SpecialImage";
 
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
+import SubTitle from "../../components/SubTitle";
+import TextTitle from "../../components/TextTitle";
 
 function ProductsPage02(props) {
   /* eslint-disable */
@@ -35,8 +37,7 @@ function ProductsPage02(props) {
 
       <section className="section-pro-04 section-padding">
         <div className="container">
-          <h2 className="text-center color-s">Log Management</h2>
-          <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
+          <TextTitle title="Log Management"/>
           <h3 className="mt-4 text-center">
             Powerful Event Log Analysis & SIEM Tools
           </h3>
@@ -71,7 +72,7 @@ function ProductsPage02(props) {
             </div>
             <div className="grid md-50 sm-100">
               <div className="pl-6">
-                <h3>Product Highlights</h3>
+                <SubTitle subTitle="Product Highlights"/>
                 <ul>
                   <li>
                     <p>
@@ -216,8 +217,7 @@ function ProductsPage02(props) {
 
       <section className="section-padding">
         <div className="container">
-          <h3 className="text-center color-s">Why NLG - See Our Use Cases</h3>
-          <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
+          <SubTitle subTitle="Why NLG - See Our Use Cases" isCentered={true} />
           <div className="ss-text-wrapper text-center">
             <p className="mt-4">
               NLG is able to provide more insight into IT network performance
@@ -267,8 +267,7 @@ function ProductsPage02(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h3>Solution Deployment</h3>
-            <div className="ss-sep-01 bg-p mt-5 ss-sep-center"></div>
+          <SubTitle subTitle="Solution Deployment" isCentered={true} />
             <p className="mt-3">
               Solution Deployment enables you to fully deploy solution
               definitions and installation packages (IPs) to remote locations.
@@ -303,6 +302,7 @@ function ProductsPage02(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
+            
             <h3>Technologies And Innovation</h3>
             <div className="ss-sep-01 ss-sep-center bg-p mt-6"></div>
             <p className="mt-3">
