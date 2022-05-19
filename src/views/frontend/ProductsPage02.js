@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "react-feather";
 import SpecialImage from "../../components/SpecialImage";
 
+import SubTitle from "../../components/SubTitle";
+import TextTitle from "../../components/TextTitle";
+
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
@@ -18,60 +21,59 @@ function ProductsPage02(props) {
   return (
     <>
       <section
-        className="section-pro-03 section-padding d-flex ai-center jc-center"
+        className="section-05 bg-fixed section-padding"
         style={{ backgroundImage: `url('/assets/img/bg/17.jpg')` }}
       >
-        <div
-          className="bg-filter"
-          style={{ background: "rgba(0,0,0,0)" }}
-        ></div>
         <div className="container">
-          <h1 className="color-white fw-800 text-center">
-            Netka AIOps Director <br />
-            The Ultimate AIOps Solution
-          </h1>
+          <div className="ss-text-wrapper text-center">
+            <h1 className="color-white fw-700 lh-sm xs-no-br">
+              Netka AIOps Director <br />
+              The Ultimate AIOps Solution
+            </h1>
+          </div>
         </div>
       </section>
 
-      <section className="section-pro-04 section-padding">
+      <section className="section-07 section-padding">
         <div className="container">
-          <h2 className="text-center color-s">Log Management</h2>
-          <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
-          <h3 className="mt-4 text-center">
-            Powerful Event Log Analysis & SIEM Tools
-          </h3>
-          <h6 className="text-center mt-3">NetkaView Logger</h6>
+          <TextTitle title="Log Management" />
           <div className="ss-text-wrapper text-center">
-            <p className="mt-4">
+            <SubTitle subTitle="Powerful Event Log Analysis & SIEM Tools" />
+            <h6 className="mt-3">NetkaView Logger</h6>
+            <p className="mt-4 color-gray">
               NLG is an appliance designed to receive and analyze all kind of IT
               logs including network log, system log, application log, security
               log and log files.
             </p>
           </div>
-          <div className="grids mt-6 pt-6">
-            <div className="grid md-50 sm-100">
-              <div className="ss-img">
-                <div className="img-bg">
-                  <img src="/assets/img/bg/31.jpg" className="img" />
-                </div>
+
+          <div className="grids mt-6 ">
+            <div className="grid lg-50 sm-100">
+              <div className="img-wrapper">
+                <SpecialImage
+                  image="/assets/img/bg/31.jpg"
+                  classer="no-hover"
+                />
               </div>
-              <p className="mt-3">
-                NetkaView Logger (NLG) is designed to receive and analyze all
-                kind of IT network traffics and logs using packet analysis
-                technology (Deep Packet Inspection: DPI) and is also a
-                centralized log management solution that helps to deal with
-                large amounts of IT device-generated syslog messages. NLG
-                supports log collection, centralized aggregation, long-term
-                retention, log search and reporting. NLG can receive and manage
-                events and logs from various platforms in your IT Infrastructure
-                such as network devices, router, switch, wireless AP, servers,
-                storages, applications, IT security devices, firewall, IPS/IDS,
-                NAC. NLG have many event management tools
-              </p>
+              <div className="ss-text-wrapper color-gray">
+                <p className="mt-3 lh-lg">
+                  <span className="fw-700">NetkaView Logger (NLG) </span>is designed to receive and analyze all
+                  kind of IT network traffics and logs using packet analysis
+                  technology (Deep Packet Inspection: DPI) and is also a
+                  centralized log management solution that helps to deal with
+                  large amounts of IT device-generated syslog messages. NLG
+                  supports log collection, centralized aggregation, long-term
+                  retention, log search and reporting. NLG can receive and manage
+                  events and logs from various platforms in your IT Infrastructure
+                  such as network devices, router, switch, wireless AP, servers,
+                  storages, applications, IT security devices, firewall, IPS/IDS,
+                  NAC. NLG have many event management tools
+                </p>
+              </div>
             </div>
-            <div className="grid md-50 sm-100">
-              <div className="pl-6">
-                <h3>Product Highlights</h3>
+            <div className="grid lg-50 sm-100 m-0">
+              <div className="ss-text-wrapper xs color-gray">
+                <SubTitle subTitle="Product Highlights" />
                 <ul>
                   <li>
                     <p>
@@ -185,26 +187,13 @@ function ProductsPage02(props) {
                   </li>
                   <li>
                     <p>
-                      <ChevronRight size="15" className="mr-2 chevron" /> Fault
-                      & Performance Management
+                      <ChevronRight size="15" className="mr-2 chevron" /> Supports alerting via Email and LINE
                     </p>
                   </li>
                   <li>
                     <p>
-                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                      Security Information and Event Management (SIEM)
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                      Network Performance Monitoring
-                    </p>
-                  </li>
-                  <li>
-                    <p>
-                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                      Supports agent-based and agentless Log collection
+                      <ChevronRight size="15" className="mr-2 chevron" /> Gain
+                      visibility & insight into your IT infrastructure
                     </p>
                   </li>
                 </ul>
@@ -216,17 +205,18 @@ function ProductsPage02(props) {
 
       <section className="section-padding">
         <div className="container">
-          <h3 className="text-center color-s">Why NLG - See Our Use Cases</h3>
-          <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
+          <div className="ss-text-wrapper">
+          <SubTitle subTitle="Why NLG - See Our Use Cases" isCentered={true} />
           <div className="ss-text-wrapper text-center">
-            <p className="mt-4">
+            <p className="mt-4 color-gray">
               NLG is able to provide more insight into IT network performance
               and connectivity. Below are example of use case scenarios to see
               how our NLG can solve your network issues and improve your
               business performance and productivity.
             </p>
           </div>
-          <div className="grids">
+          </div>
+          <div className="grids mt-4">
             {[
               "/assets/img/bg/32.jpg",
               "/assets/img/bg/32.jpg",
@@ -253,9 +243,8 @@ function ProductsPage02(props) {
         </div>
       </section>
 
-      {/* Parallax Scrolling Effect */}
       <section
-        className="section-pro-02 section-padding d-flex ai-center jc-center"
+        className="section-05 bg-fixed bg-sm"
         style={{ backgroundImage: `url('/assets/img/bg/23.jpg')` }}
       >
         <h1 className="color-white text-center">
@@ -266,9 +255,8 @@ function ProductsPage02(props) {
 
       <section className="section-padding">
         <div className="container">
-          <div className="ss-text-wrapper text-center">
-            <h3>Solution Deployment</h3>
-            <div className="ss-sep-01 bg-p mt-5 ss-sep-center"></div>
+          <div className="ss-text-wrapper text-center color-gray">
+            <SubTitle subTitle="Solution Deployment" isCentered={true} />
             <p className="mt-3">
               Solution Deployment enables you to fully deploy solution
               definitions and installation packages (IPs) to remote locations.
@@ -283,12 +271,12 @@ function ProductsPage02(props) {
               <div key={`card_${i}`} className="grid md-1-3 sm-50">
                 <div className="pt-5">
                   <SpecialImage image={d} goTo={`/content/${i}`} />
-                  <div className="ss-sep-01 bg-p mt-6"></div>
-                  <div className="mt-4">
+                  <div className="mt-3">
                     <Link className="h6 fw-600 h-color-p" to={`/content/${i}`}>
                       Packet Analyzer Mode
                     </Link>
-                    <p className="mt-2">
+                    <div className="ss-sep-01 bg-p mt-2"></div>
+                    <p className="mt-2 color-gray">
                       Receiving the data from IT network by capture traffic via
                       Port mirroring,SPAN, Network Tap, Network Broker
                     </p>
@@ -302,9 +290,8 @@ function ProductsPage02(props) {
 
       <section className="section-padding">
         <div className="container">
-          <div className="ss-text-wrapper text-center">
-            <h3>Technologies And Innovation</h3>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-6"></div>
+          <div className="ss-text-wrapper text-center color-gray">
+            <SubTitle subTitle="Technologies And Innovation" isCentered={true} />
             <p className="mt-3">
               NLG is logger, packet analyzer, flow analyzer and event management
               tools including event suppression, event correlation, event action
@@ -313,54 +300,34 @@ function ProductsPage02(props) {
           </div>
           <div className="grids mt-6">
             <div className="grid md-1-3">
-              <h6>Customizable BI Dashboard</h6>
-              <p className="mt-2">
-                Provides flexibility and useful customization with Business
-                Intelligence tool to support user defined dashboards for big
-                data analytics.
-              </p>
+              <div className="ss-text-wrapper">
+                <h6 className="h-color-p fw-600">Customizable BI Dashboard</h6>
+                <p className="mt-2 color-gray">
+                  Provides flexibility and useful customization with Business
+                  Intelligence tool to support user defined dashboards for big
+                  data analytics.
+                </p>
+              </div>
             </div>
             <div className="grid md-1-3">
-              <h6>Customizable BI Dashboard</h6>
-              <p className="mt-2">
-                Provides flexibility and useful customization with Business
-                Intelligence tool to support user defined dashboards for big
-                data analytics.
-              </p>
+              <div className="ss-text-wrapper">
+                <h6 className="h-color-p fw-600">Customizable BI Dashboard</h6>
+                <p className="mt-2 color-gray">
+                  Provides flexibility and useful customization with Business
+                  Intelligence tool to support user defined dashboards for big
+                  data analytics.
+                </p>
+              </div>
             </div>
             <div className="grid md-1-3">
-              <h6>Customizable BI Dashboard</h6>
-              <p className="mt-2">
-                Provides flexibility and useful customization with Business
-                Intelligence tool to support user defined dashboards for big
-                data analytics.
-              </p>
-            </div>
-          </div>
-          <div className="grids mt-4">
-            <div className="grid md-1-3">
-              <h6>Customizable BI Dashboard</h6>
-              <p className="mt-2">
-                Provides flexibility and useful customization with Business
-                Intelligence tool to support user defined dashboards for big
-                data analytics.
-              </p>
-            </div>
-            <div className="grid md-1-3">
-              <h6>Customizable BI Dashboard</h6>
-              <p className="mt-2">
-                Provides flexibility and useful customization with Business
-                Intelligence tool to support user defined dashboards for big
-                data analytics.
-              </p>
-            </div>
-            <div className="grid md-1-3">
-              <h6>Customizable BI Dashboard</h6>
-              <p className="mt-2">
-                Provides flexibility and useful customization with Business
-                Intelligence tool to support user defined dashboards for big
-                data analytics.
-              </p>
+              <div className="ss-text-wrapper">
+                <h6 className="h-color-p fw-600">Customizable BI Dashboard</h6>
+                <p className="mt-2 color-gray">
+                  Provides flexibility and useful customization with Business
+                  Intelligence tool to support user defined dashboards for big
+                  data analytics.
+                </p>
+              </div>
             </div>
           </div>
         </div>

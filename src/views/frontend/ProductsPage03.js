@@ -7,6 +7,9 @@ import SpecialImage from "../../components/SpecialImage";
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
+import TextTitle from "../../components/TextTitle";
+import SubTitle from "../../components/SubTitle";
+
 function ProductsPage03(props) {
   /* eslint-disable */
   useEffect(() => {
@@ -18,18 +21,16 @@ function ProductsPage03(props) {
   return (
     <>
       <section
-        className="section-pro-03 section-padding d-flex ai-center jc-center"
+        className="section-05 bg-fixed section-padding"
         style={{ backgroundImage: `url('/assets/img/bg/17.jpg')` }}
       >
-        <div
-          className="bg-filter"
-          style={{ background: "rgba(0,0,0,0)" }}
-        ></div>
         <div className="container">
-          <h1 className="color-white fw-800 text-center">
-            Netka AIOps Director <br />
-            The Ultimate AIOps Solution
-          </h1>
+          <div className="ss-text-wrapper text-center">
+            <h1 className="color-white fw-700 lh-sm xs-no-br">
+              Netka AIOps Director <br />
+              The Ultimate AIOps Solution
+            </h1>
+          </div>
         </div>
       </section>
 
@@ -92,8 +93,7 @@ function ProductsPage03(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h3>Why NNMX - See Our Use Cases</h3>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
+          <SubTitle subTitle="Why NNMX - See Our Use Cases"/>
             <p className="mt-4">
               NNMX is able to provide more insight into IT network performance
               and connectivity. Below are example of use case scenarios to see
@@ -134,13 +134,12 @@ function ProductsPage03(props) {
       </section>
 
       <section
-        className="section-pro-02 section-padding d-flex ai-center jc-center"
+        className="section-05 bg-fixed bg-sm"
         style={{ backgroundImage: `url('/assets/img/bg/23.jpg')` }}
       >
         <div className="ss-text-wrapper text-center">
-          <h3 className="color-white">
-            Intelligent IT Infrastructure Management Solutions
-          </h3>
+        <SubTitle subTitle="Intelligent IT Infrastructure Management Solutions" colorClasser={'color-white'}/>
+
           <p>
             NNMX provides Fault, Configuration, Accounting, Performance and
             Security management (FCAPS) that is aligned with ITU-T M.3040 (TMN)
@@ -152,8 +151,7 @@ function ProductsPage03(props) {
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h3>Technologies And Innovations</h3>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-5"></div>
+          <SubTitle subTitle="Technologies And Innovations" isCentered={true}/>
             <p className="mt-4">
               NNMX is a major change of NetkaView Network Manager (NNM) with new
               technologies, those make the NNMX more intelligent ever,

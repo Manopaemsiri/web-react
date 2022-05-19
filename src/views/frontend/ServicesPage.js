@@ -6,6 +6,8 @@ import { ChevronRight } from "react-feather";
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
+import TextTitle from "../../components/TextTitle";
+
 function ServicesPage(props) {
   /* eslint-disable */
   useEffect(() => {
@@ -16,9 +18,9 @@ function ServicesPage(props) {
 
   return (
     <>
-      <section className="section-news-01 d-flex ai-center">
+      <section className="section-06">
         <div className="container">
-          <p className="d-flex ai-center text-small color-white">
+          <p className="d-flex ai-center text-sm color-white">
             Home <ChevronRight size="15" className="ml-2 mr-2" /> Services
           </p>
           <h3 className="fw-800 mt-2 color-white">Services</h3>
@@ -26,15 +28,13 @@ function ServicesPage(props) {
         </div>
       </section>
 
-      <section className="section-demo-02 section-padding color-gray">
+      <section className="section-padding">
         <div className="container">
           <div className="grids">
-            {/* left content */}
-            <div className="grid md-70 sm-100 pr-6">
-              <div className="left-content">
-                <div className="text-container">
-                  <h2>AIOps</h2>
-                  <div className="ss-sep-01 bg-p mt-4"></div>
+            <div className="grid md-70 sm-100 xs-100">
+              <div className="panel-left">
+                <div className="ss-text-wrapper color-gray">
+                  <TextTitle title="AIOps" isCentered={false} />
                   <p className="mt-6">
                     Artificial Intelligence for IT Operations (AIOps) describes
                     the combination of big data and machine learning (ML) to
@@ -42,9 +42,8 @@ function ServicesPage(props) {
                     correlation, anomaly detection and root cause analysis.
                   </p>
                 </div>
-                <div className="text-container mt-6">
-                  <h2>What is AIOps?</h2>
-                  <div className="ss-sep-01 bg-p mt-4"></div>
+                <div className="ss-text-wrapper mt-6 color-gray">
+                  <TextTitle title="What is AIOps?" isCentered={false} />
                   <p className="mt-6">
                     AIOps stand for Artificial Intelligence for IT Operations,
                     which is using Artificial Intelligence (AI) technology to
@@ -57,9 +56,8 @@ function ServicesPage(props) {
                   </p>
                 </div>
 
-                <div className="text-container mt-6">
-                  <h2>AIOps</h2>
-                  <div className="ss-sep-01 bg-p mt-4"></div>
+                <div className="ss-text-wrapper mt-6 color-gray">
+                  <TextTitle title="AIOps" isCentered={false} />
                   <p className="mt-6">
                     AIOps stand for Artificial Intelligence for IT Operations,
                     which is using Artificial Intelligence (AI) technology to
@@ -145,8 +143,7 @@ function ServicesPage(props) {
                     </li>
                   </ol>
                   <div className="text-container mt-6">
-                    <h2>AIOps for Automation</h2>
-                    <div className="ss-sep-01 bg-p mt-4"></div>
+                  <TextTitle title="AIOps for Automation" isCentered={false} />
                     <p className="mt-6">
                       AIOps stand for Artificial Intelligence for IT Operations,
                       which is using Artificial Intelligence (AI) technology to
@@ -194,9 +191,8 @@ function ServicesPage(props) {
                 </div>
               </div>
             </div>
-            {/* right content */}
-            <div className="grid md-30 sm-100">
-              <div className="right-content">
+            <div className="grid md-30 sm-100 xs-100">
+              <div className="panel-right">
                 <ul className="bg-p p-5 color-white box-shadow">
                   <li>
                     <Link to="/" className="p color-white">
@@ -230,7 +226,7 @@ function ServicesPage(props) {
                   </li>
                 </ul>
 
-                <div className="bg-s color-white p-5 box-shadow">
+                <div className="bg-s color-white p-5 mt-4 box-shadow ">
                   <h4>LOREM IPSUM</h4>
                   <div className="contact-container mt-4">
                     <p>Call Us</p>
@@ -263,7 +259,8 @@ function ServicesPage(props) {
                   </div>
                 </div>
 
-                <div className="quotation box-shadow p-5 mt-5">
+                <div className="box-shadow p-5 mt-4">
+                  <div className="ss-text-wrapper color-gray">
                   <p>
                     the company would continue to focus on expanding its current
                     customer base for its core services while investing more
@@ -271,8 +268,9 @@ function ServicesPage(props) {
                     for growing customer demand for digital content consumption
                     and other opportunities
                   </p>
+                  </div>
                   <div className="ss-sep-01 bg-p mt-4"></div>
-                  <div className="quotation-profile mt-4 d-flex">
+                  <div className="mt-4 d-flex">
                     <img src="https://www.netkasystem.com/wp-content/uploads/2020/03/proen-50x50.jpg"></img>
                     <div className="pl-4">
                       <p className="color-dark fw-600">Mr.Sarun Seepun</p>
