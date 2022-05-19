@@ -4,9 +4,10 @@ function SubTitle(props) {
     return(
         <>
          <h3 className={`
+         mt-4
          ${props.colorClasser}
          ${props.isCentered? 'text-center': ''}`}>{props.subTitle}</h3>
-         <div className={`${props.isCentered? 'ss-sep-01 bg-p mt-2 mb-3 ss-sep-center': ''}`}></div>
+         <div className={`${props.isCentered? 'ss-sep-01 bg-p mt-4  ss-sep-center': ''}`}></div>
         </>
     );
 }

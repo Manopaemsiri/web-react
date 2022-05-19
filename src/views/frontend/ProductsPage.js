@@ -36,18 +36,18 @@ function ProductsPage(props) {
       <section className="section-03 section-padding">
         <div className="container">
           <TextTitle title="Netka AIOps Director" />
-          <div className="ss-text-wrapper sm ml-0">
-            <SubTitle subTitle="What Is Netka AIOps Director?" />
-            <p className="color-gray mt-2 mb-4">
+          <div className="ss-text-wrapper sm ml-0 mt-6 pt-6 color-gray">
+            <SubTitle subTitle="What Is Netka AIOps Director ?" />
+            <p>
               Netka AIOps Director or N-AIOps is AIOps Platform which provides
               data ingestion data analytics by using AI technologies and
               intelligently drive automation
             </p>
           </div>
           <div className="grids ai-center pt-6">
-            <div className="grid lg-50 sm-100 mt-0">
+            <div className="grid lg-50 sm-100 xs-100 mt-0">
               <div className="ss-text-wrapper xs color-gray text-left ml-0">
-                <SubTitle subTitle="Overview"/>
+                <SubTitle subTitle="Overview" />
                 <p className="mt-2">
                   Netka AIOps Director or N-AIOps is AIOps Platform which
                   provides data ingestion, data analytics by using AI
@@ -74,7 +74,7 @@ function ProductsPage(props) {
                 </ol>
               </div>
             </div>
-            <div className="grid lg-50 sm-100 mt-0">
+            <div className="grid lg-50 sm-100 xs-100 mt-0">
               <div className="img-wrapper">
                 <SpecialImage
                   image="/assets/img/bg/21.jpg"
@@ -88,55 +88,66 @@ function ProductsPage(props) {
 
       <section className="section-padding">
         <div className="container">
-          <TextTitle title="Netka AIOps Director, The Ultimate AIOps Solution"/>
+          <TextTitle title="Netka AIOps Director, The Ultimate AIOps Solution" />
           <div className="mt-6 pt-2">
             <img src="/assets/img/bg/18.jpg" className="img" />
           </div>
-          <p className="mt-6 color-gray">
-            N-AIOps can work with 3rd party application which send data with
-            Syslog, SNMP Trap or JSON format and work seamlessly with Netka
-            products including
-          </p>
-          <p className="mt-4 color-gray">
-            Netka AIOps Director or N-AIOps is AIOps Platform which provides
-            data ingestion, data analytics by using AI technologies and
-            intelligently drive automation. N-AIOps have workflow designer which
-            is tool for creating automation process that can flexibly design
-            workflow with complex conditions. N-AIOps is platform which require
-            data from IT management systems e.g. ITIM, ITSM, NPMD, SIEM, APM,
-            DEM for cross-domain analysis and drive automation. N-AIOps supports
-            data for processing as follow:
-          </p>
-          <p className="mt-4 color-gray">
-            Netka AIOps Director or N-AIOps is AIOps Platform which provides
-            data ingestion, data analytics by using AI technologies and
-            intelligently drive automation. N-AIOps have workflow designer which
-            is tool for creating automation process that can flexibly design
-            workflow with complex conditions. N-AIOps is platform which require
-            data from IT management systems e.g. ITIM, ITSM, NPMD, SIEM, APM,
-            DEM for cross-domain analysis and drive automation. N-AIOps supports
-            data for processing as follow:
-          </p>
-          <SubTitle subTitle="The Netka AIOps’s Life Cycle" isCentered={false} />
-          <p className="mt-4 color-gray">
-            When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
-            ultimate AIOps Solution” which provides cross-domain analysis for IT
-            Infrastructure Management, IT Service Management, Network
-            Performance Monitoring and Diagnostics, Security Information and
-            Event Management, Application Performance Monitoring and Digital
-            Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
-            as follow:
-          </p>
-          <p className="mt-4 color-gray">
-            When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
-            ultimate AIOps Solution” which provides cross-domain analysis for IT
-            Infrastructure Management, IT Service Management, Network
-            Performance Monitoring and Diagnostics, Security Information and
-            Event Management, Application Performance Monitoring and Digital
-            Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
-            as follow:
-          </p>
-          <div className="ss-sep-01 bg-p mt-4"></div>
+          <div className="ss-text-wrapper lg ml-0 color-gray">
+            <p className="mt-6">
+              N-AIOps can work with 3rd party application which send data with
+              Syslog, SNMP Trap or JSON format and work seamlessly with Netka
+              products including
+            </p>
+            <p className="mt-4">
+              Netka AIOps Director or N-AIOps is AIOps Platform which provides
+              data ingestion, data analytics by using AI technologies and
+              intelligently drive automation. N-AIOps have workflow designer which
+              is tool for creating automation process that can flexibly design
+              workflow with complex conditions. N-AIOps is platform which require
+              data from IT management systems e.g. ITIM, ITSM, NPMD, SIEM, APM,
+              DEM for cross-domain analysis and drive automation. N-AIOps supports
+              data for processing as follow:
+            </p>
+            <p className="mt-4">
+              Netka AIOps Director or N-AIOps is AIOps Platform which provides
+              data ingestion, data analytics by using AI technologies and
+              intelligently drive automation. N-AIOps have workflow designer which
+              is tool for creating automation process that can flexibly design
+              workflow with complex conditions. N-AIOps is platform which require
+              data from IT management systems e.g. ITIM, ITSM, NPMD, SIEM, APM,
+              DEM for cross-domain analysis and drive automation. N-AIOps supports
+              data for processing as follow:
+            </p>
+            <SubTitle subTitle="The Netka AIOps’s Life Cycle" isCentered={false} />
+            <p className="mt-4">
+              When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
+              ultimate AIOps Solution” which provides cross-domain analysis for IT
+              Infrastructure Management, IT Service Management, Network
+              Performance Monitoring and Diagnostics, Security Information and
+              Event Management, Application Performance Monitoring and Digital
+              Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
+              as follow:
+            </p>
+            <p className="mt-4">
+              When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
+              ultimate AIOps Solution” which provides cross-domain analysis for IT
+              Infrastructure Management, IT Service Management, Network
+              Performance Monitoring and Diagnostics, Security Information and
+              Event Management, Application Performance Monitoring and Digital
+              Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
+              as follow:
+            </p>
+            <p className="mt-4">
+              When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
+              ultimate AIOps Solution” which provides cross-domain analysis for IT
+              Infrastructure Management, IT Service Management, Network
+              Performance Monitoring and Diagnostics, Security Information and
+              Event Management, Application Performance Monitoring and Digital
+              Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
+              as follow:
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -154,30 +165,37 @@ function ProductsPage(props) {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-03 section-padding">
         <div className="container">
-          <div className="grids">
-            <div className="grid md-50 sm-100">
-              <img src="/assets/img/bg/24.png" className="img" />
+          <div className="grids ai-center">
+            <div className="grid lg-50 sm-100 xs-100">
+            <div className="img-wrapper">
+                <SpecialImage
+                  image="/assets/img/bg/24.png"
+                  classer="no-hover"
+                />
+              </div>
             </div>
 
-            <div className="grid md-50 sm-100 pl-6 mt-0">
-              <SubTitle subTitle="Sample Use Cases Of N-AIOps"/>
-              <p className="mt-2 color-gray">
-                N-AIOps can start workflow and run playbook into CIs when
-                incoming log matched predefined rule. Also, N-AIOps can detect
-                anomaly and finding root cause from cross-domain analysis. For
-                example, when user have bad experience from using an application
-                because of slowness and disconnections. This kind of problem
-                requires cross-domain analysis based on variety of data e.g.
-                traffic utilization, cpu utilization, memory utilization, disk
-                usage, network quality (latency, jitter, packet loss),
-                hop-by-hop latency, end-to-end latency, trace/span data.
-              </p>
-              <div className="btns pt-4">
-                <Link to="/" className="btn btn-action btn-p">
-                  CONTACT
-                </Link>
+            <div className="grid lg-50 sm-100 xs-100 mt-0">
+              <div className="ss-text-wrapper sm ml-0">
+                <SubTitle subTitle="Sample Use Cases Of N-AIOps" />
+                <p className="mt-2 color-gray">
+                  N-AIOps can start workflow and run playbook into CIs when
+                  incoming log matched predefined rule. Also, N-AIOps can detect
+                  anomaly and finding root cause from cross-domain analysis. For
+                  example, when user have bad experience from using an application
+                  because of slowness and disconnections. This kind of problem
+                  requires cross-domain analysis based on variety of data e.g.
+                  traffic utilization, cpu utilization, memory utilization, disk
+                  usage, network quality (latency, jitter, packet loss),
+                  hop-by-hop latency, end-to-end latency, trace/span data.
+                </p>
+                <div className="btns pt-4">
+                  <Link to="/" className="btn btn-action btn-p">
+                    CONTACT
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
