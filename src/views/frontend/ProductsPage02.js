@@ -22,7 +22,7 @@ function ProductsPage02(props) {
     <>
       <section
         className="section-05 bg-fixed section-padding"
-        style={{ backgroundImage: `url('/assets/img/bg/17.jpg')` }}
+        style={{ backgroundImage: `url('/assets/img/bg/55.jpg')` }}
       >
         <div className="container">
           <div className="ss-text-wrapper text-center">
@@ -37,8 +37,8 @@ function ProductsPage02(props) {
       <section className="section-07 section-padding">
         <div className="container">
           <TextTitle title="Log Management" />
-          <div className="ss-text-wrapper text-center">
-            <SubTitle subTitle="Powerful Event Log Analysis & SIEM Tools" />
+          <div className="ss-text-wrapper text-center mt-4">
+            <h4>Powerful Event Log Analysis & SIEM</h4>
             <h6 className="mt-3">NetkaView Logger</h6>
             <p className="mt-4 color-gray">
               NLG is an appliance designed to receive and analyze all kind of IT
@@ -288,10 +288,10 @@ function ProductsPage02(props) {
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-11 bg-s section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center color-gray">
-            <SubTitle subTitle="Technologies And Innovation" isCentered={true} />
+            <SubTitle subTitle="Technologies And Innovation" isCentered={true} colorClasser={'color-white'} />
             <p className="mt-3">
               NLG is logger, packet analyzer, flow analyzer and event management
               tools including event suppression, event correlation, event action
@@ -301,7 +301,7 @@ function ProductsPage02(props) {
           <div className="grids mt-6">
             <div className="grid md-1-3">
               <div className="ss-text-wrapper">
-                <h6 className="h-color-p fw-600">Customizable BI Dashboard</h6>
+                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
                 <p className="mt-2 color-gray">
                   Provides flexibility and useful customization with Business
                   Intelligence tool to support user defined dashboards for big
@@ -311,7 +311,7 @@ function ProductsPage02(props) {
             </div>
             <div className="grid md-1-3">
               <div className="ss-text-wrapper">
-                <h6 className="h-color-p fw-600">Customizable BI Dashboard</h6>
+                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
                 <p className="mt-2 color-gray">
                   Provides flexibility and useful customization with Business
                   Intelligence tool to support user defined dashboards for big
@@ -321,7 +321,7 @@ function ProductsPage02(props) {
             </div>
             <div className="grid md-1-3">
               <div className="ss-text-wrapper">
-                <h6 className="h-color-p fw-600">Customizable BI Dashboard</h6>
+                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
                 <p className="mt-2 color-gray">
                   Provides flexibility and useful customization with Business
                   Intelligence tool to support user defined dashboards for big
@@ -329,6 +329,15 @@ function ProductsPage02(props) {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container">
+          <div className="ss-text-wrapper color-gray">
+            <SubTitle subTitle="Get Connected" />
+            <p>Get yourself ready for an awesome experience with NNMX</p>
           </div>
         </div>
       </section>

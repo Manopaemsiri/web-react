@@ -1,20 +1,21 @@
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Clock } from 'react-feather';
-import { onMounted } from '../../helpers/frontend';
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Clock } from "react-feather";
+import { onMounted } from "../../helpers/frontend";
 
-import SectionBanner from '../../components/SectionBanner';
-import SpecialImage from '../../components/SpecialImage';
-import TextTitle from '../../components/TextTitle';
+import SectionBanner from "../../components/SectionBanner";
+import SpecialImage from "../../components/SpecialImage";
+import TextTitle from "../../components/TextTitle";
 
-import { connect } from 'react-redux';
-import { setTopnavActiveIndex } from '../../actions/general.actions';
-
+import { connect } from "react-redux";
+import { setTopnavActiveIndex } from "../../actions/general.actions";
 
 function HomePage(props) {
-
   /* eslint-disable */
-	useEffect(() => { onMounted(false); props.setTopnavActiveIndex(1); }, []);
+  useEffect(() => {
+    onMounted(false);
+    props.setTopnavActiveIndex(1);
+  }, []);
   /* eslint-enable */
 
   return (
@@ -46,11 +47,11 @@ function HomePage(props) {
         <div className="container">
           <div className="ss-text-wrapper text-center">
             <TextTitle title="ITOM" />
-            <p className="lg mt-5">
-              IT operations management (ITOM) is the administrative area involving
-              technology infrastructure components and the requirements of
-              individual applications, services, storage, networking and
-              connectivity elements within an organization.
+            <p className="lg mt-5 color-gray">
+              IT operations management (ITOM) is the administrative area
+              involving technology infrastructure components and the
+              requirements of individual applications, services, storage,
+              networking and connectivity elements within an organization.
             </p>
             <div className="mt-6 pt-1">
               <Link to="/" className="btn btn-action btn-p">
@@ -65,16 +66,16 @@ function HomePage(props) {
         <div className="container">
           <div className="ss-text-wrapper text-center">
             <TextTitle title="ITOM Use Case" />
-            <p className="lg mt-5">
+            <p className="lg mt-5 color-gray">
               Netka’s ITOM use cases. How to apply Netka’s products and solution
               in your industry
             </p>
           </div>
           <div className="grids pt-1">
             {[
-              '/assets/img/bg/02.jpg',
-              '/assets/img/bg/03.jpg',
-              '/assets/img/bg/04.jpg',
+              "/assets/img/bg/02.jpg",
+              "/assets/img/bg/03.jpg",
+              "/assets/img/bg/04.jpg",
             ].map((d, i) => (
               <div key={`card_${i}`} className="grid lg-1-3 md-50 sm-50">
                 <div className="pt-5">
@@ -103,8 +104,8 @@ function HomePage(props) {
               <div className="ss-text-wrapper xs text-center">
                 <TextTitle title="AIOps" colorClasser="color-white" />
                 <p className="lg color-white op-80 mt-5">
-                  AIOps, or Artificial Intelligence for IT Operations, is the next
-                  generation of IT operations analytics.
+                  AIOps, or Artificial Intelligence for IT Operations, is the
+                  next generation of IT operations analytics.
                 </p>
                 <div className="mt-6 pt-1">
                   <Link to="/" className="btn btn-action btn-p">
@@ -115,7 +116,10 @@ function HomePage(props) {
             </div>
             <div className="grid lg-50 sm-100 mt-0">
               <div className="img-wrapper">
-                <SpecialImage image="/assets/img/bg/07.jpg" classer="no-hover" />
+                <SpecialImage
+                  image="/assets/img/bg/07.jpg"
+                  classer="no-hover"
+                />
               </div>
             </div>
           </div>
@@ -128,13 +132,13 @@ function HomePage(props) {
             <div className="grid lg-50 sm-100 mt-0">
               <div className="ss-text-wrapper xs text-center">
                 <TextTitle title="Network Management" />
-                <p className="lg mt-5">
-                  The purpose of IT infrastructure management (ITIM) is to provide
-                  managing, operation and control of the installed IT
+                <p className="lg mt-5 color-gray">
+                  The purpose of IT infrastructure management (ITIM) is to
+                  provide managing, operation and control of the installed IT
                   infrastructure which generally involve hardware: servers &
                   storage, software, application and networking in both physical
-                  and virtual environments.Operations, is the next
-                  generation of IT operations analytics.
+                  and virtual environments.Operations, is the next generation of
+                  IT operations analytics.
                 </p>
                 <div className="mt-6 pt-1">
                   <Link to="/" className="btn btn-action btn-p">
@@ -145,7 +149,10 @@ function HomePage(props) {
             </div>
             <div className="grid lg-50 sm-100 mt-0">
               <div className="img-wrapper">
-                <SpecialImage image="/assets/img/bg/08.jpg" classer="no-hover" />
+                <SpecialImage
+                  image="/assets/img/bg/08.jpg"
+                  classer="no-hover"
+                />
               </div>
             </div>
           </div>
@@ -156,24 +163,27 @@ function HomePage(props) {
         <div className="container">
           <div className="ss-text-wrapper text-center">
             <TextTitle title="Netka's Network Management News" />
-            <p className="lg mt-5">
+            <p className="lg mt-5 color-gray">
               Netka News, the activities of Netka System, what we do to our
               customers and public
             </p>
           </div>
           <div className="grids pt-1">
             {[
-              '/assets/img/bg/14.jpg',
-              '/assets/img/bg/13.jpg',
-              '/assets/img/bg/12.jpg',
-              '/assets/img/bg/10.jpg',
+              "/assets/img/bg/14.jpg",
+              "/assets/img/bg/13.jpg",
+              "/assets/img/bg/12.jpg",
+              "/assets/img/bg/10.jpg",
             ].map((d, i) => (
               <div key={`card_${i}`} className="grid lg-25 md-50 sm-50">
                 <div className="pt-5">
                   <SpecialImage image={d} goTo={`/content/${i}`} />
                   <div className="ss-sep-01 bg-p mt-4"></div>
                   <div className="mt-3">
-                    <Link className="p lg fw-600 h-color-p" to={`/content/${i}`}>
+                    <Link
+                      className="p lg fw-600 h-color-p"
+                      to={`/content/${i}`}
+                    >
                       MONITOR YOUR BUSINESS SERVERS AND APPLICATIONS
                     </Link>
                     <div className="d-flex ai-center mt-2">
@@ -194,10 +204,7 @@ function HomePage(props) {
             <TextTitle title="Netka 's Network Management Testimonials" />
           </div>
           <div className="grids pt-1">
-            {[
-              '/assets/img/bg/09.jpg',
-              '/assets/img/bg/02.jpg',
-            ].map((d, i) => (
+            {["/assets/img/bg/09.jpg", "/assets/img/bg/02.jpg"].map((d, i) => (
               <div key={`card_${i}`} className="grid lg-50 md-50 sm-50">
                 <div className="pt-5">
                   <SpecialImage image={d} goTo={`/content/${i}`} />
@@ -218,32 +225,34 @@ function HomePage(props) {
         </div>
       </section>
 
-      <section 
-        className="section-05 bg-sm bg-fixed section-padding" 
+      <section
+        className="section-05 bg-sm bg-fixed section-padding"
         style={{ backgroundImage: `url('/assets/img/bg/06.jpg')` }}
       >
-        <div className="bg-filter" style={{ background: 'rgba(0,0,0,0)' }}></div>
+        <div
+          className="bg-filter"
+          style={{ background: "rgba(0,0,0,0)" }}
+        ></div>
         <div className="container">
           <div className="ss-text-wrapper lg text-center color-white">
-            <TextTitle 
-              title="Netka 's ITOM Solutions, Who we are" 
-              colorClasser="color-white" 
+            <TextTitle
+              title="Netka 's ITOM Solutions, Who we are"
+              colorClasser="color-white"
             />
             <p className="lg op-70 mt-5">
               Netka, an expertized Independent Software Vendor (ISV),
               exceptionally in developing software for network management. Our
-              trustworthy is accredited from many world-class aviation
-              airports, includes the advanced ISP for their working
-              applications.
+              trustworthy is accredited from many world-class aviation airports,
+              includes the advanced ISP for their working applications.
             </p>
             <p className="lg op-70 mt-4">
               Netka’s software have extended over IT Operations Management
-              (ITOM) : IT Infrastructure Management (ITIM) – covers for
-              servers, storage, networking, network linking and network
-              connecting devices. Netka’s software incorporate application and
-              service varieties by working consistently on the centralized
-              management basis. Besides, Netka also provide IT Service
-              Management (ITSM) which is certified by the ITIL.
+              (ITOM) : IT Infrastructure Management (ITIM) – covers for servers,
+              storage, networking, network linking and network connecting
+              devices. Netka’s software incorporate application and service
+              varieties by working consistently on the centralized management
+              basis. Besides, Netka also provide IT Service Management (ITSM)
+              which is certified by the ITIL.
             </p>
             <div className="mt-6 pt-1">
               <Link to="/" className="btn btn-action btn-p">
@@ -257,10 +266,8 @@ function HomePage(props) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  
-});
+const mapStateToProps = (state) => ({});
 
 export default connect(mapStateToProps, {
-  setTopnavActiveIndex: setTopnavActiveIndex
+  setTopnavActiveIndex: setTopnavActiveIndex,
 })(HomePage);

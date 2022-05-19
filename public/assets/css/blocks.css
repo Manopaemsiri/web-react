@@ -104,12 +104,28 @@
 }
 
 
+/* Section 08 */
+.section-08{position:relative; overflow:hidden;}
+.section-08 .item-card{display:flex; margin:1rem 0 0 0;}
+.section-08 .item-card > .icon-wrapper{width:2rem; text-align:center;}
+.section-08 .item-card > .text-wrapper{width:calc(100% - 2rem); padding:0 0 0 4rem;}
+.section-08 .item-card .item-title{font-size:.75rem; font-weight:600; letter-spacing:.075rem;}
+@media screen and (max-width:576.98px){
+  .section-08 .item-card > .text-wrapper{padding:0 0 0 3.5rem;}
+}
+
+
 /* Section 09 */
 .section-09{
   position:relative; min-height:500px;
   background-size:cover; background-repeat:no-repeat; background-position:center;
 }
 
+
+/* Section 10 */
+@media screen and (max-width:991.98px){
+  .section-10 .xs{margin-left:0;}
+ }
 
 
 

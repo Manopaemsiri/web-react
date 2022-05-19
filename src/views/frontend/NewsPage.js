@@ -4,6 +4,10 @@ import SpecialImage from '../../components/SpecialImage';
 import { Clock } from 'react-feather';
 import { Link } from "react-router-dom";
 import { ChevronRight } from "react-feather";
+
+import SubTitle from "../../components/SubTitle";
+import TextTitle from "../../components/TextTitle";
+
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
@@ -29,8 +33,7 @@ function NewsPage(props) {
 
       <section className="section-padding">
         <div className="container">
-          <h2>Product Update</h2>
-          <div className="ss-sep-01 bg-p mt-4"></div>
+          <TextTitle title="Product Update" isCentered={false}/>
           <div className="grids pt-1">
             {[
               '/assets/img/bg/25.png',
@@ -84,8 +87,7 @@ function NewsPage(props) {
 
       <section className="section-padding">
         <div className="container">
-          <h2>Event</h2>
-          <div className="ss-sep-01 bg-p mt-4"></div>
+        <TextTitle title="Event" isCentered={false}/>
           <div className="grids pt-1">
             {[
               '/assets/img/bg/26.jpg',
@@ -139,8 +141,7 @@ function NewsPage(props) {
 
       <section className="section-padding">
         <div className="container">
-          <h2>CSR</h2>
-          <div className="ss-sep-01 bg-p mt-4"></div>
+        <TextTitle title="CSR" isCentered={false}/>
           <div className="grids pt-1">
             {[
                '/assets/img/bg/27.jpg',

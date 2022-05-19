@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "react-feather";
 import SpecialImage from "../../components/SpecialImage";
 
+import SubTitle from "../../components/SubTitle";
+import TextTitle from "../../components/TextTitle";
+
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
-
-import TextTitle from "../../components/TextTitle";
-import SubTitle from "../../components/SubTitle";
 
 function ProductsPage03(props) {
   /* eslint-disable */
@@ -22,7 +22,7 @@ function ProductsPage03(props) {
     <>
       <section
         className="section-05 bg-fixed section-padding"
-        style={{ backgroundImage: `url('/assets/img/bg/17.jpg')` }}
+        style={{ backgroundImage: `url('/assets/img/bg/58.jpg')` }}
       >
         <div className="container">
           <div className="ss-text-wrapper text-center">
@@ -34,14 +34,12 @@ function ProductsPage03(props) {
         </div>
       </section>
 
-      <section className="section-pro-04 section-padding">
+      <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h2>Network Analysis</h2>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
+            <TextTitle title="Network Analysis" />
             <h4 className="mt-4">Network Tools and Network Monitoring Tool</h4>
-            <h6>NNMX IT Infrastructure Management and Network Monitoring</h6>
-            <p className="mt-4">
+            <p className="mt-4 color-gray">
               NNMX is an intelligent IT infrastructure management which is a
               part of Netka’s IT operations management solution to provide the
               innovative managing multi-vendor IP network, Security, Server,
@@ -50,51 +48,48 @@ function ProductsPage03(props) {
             </p>
           </div>
           <div className="grids mt-6">
-            <div className="grid md-20">
+            <div className="grid md-20 xs-50">
               <div className="text-center">
                 <img src="/assets/img/bg/35.png" width="80" />
-                <p>Server & Application</p>
+                <p className="fw-500">Server & Application</p>
               </div>
             </div>
-            <div className="grid md-20">
+            <div className="grid md-20 xs-50">
               <div className="text-center">
                 <img src="/assets/img/bg/35.png" width="80" />
-                <p>Server & Application</p>
+                <p className="fw-500">Server & Application</p>
               </div>
             </div>
-            <div className="grid md-20">
+            <div className="grid md-20 xs-50">
               <div className="text-center">
                 <img src="/assets/img/bg/35.png" width="80" />
-                <p>Server & Application</p>
+                <p className="fw-500">Server & Application</p>
               </div>
             </div>
-            <div className="grid md-20">
+            <div className="grid md-20 xs-50">
               <div className="text-center">
                 <img src="/assets/img/bg/35.png" width="80" />
-                <p>Server & Application</p>
+                <p className="fw-500">Server & Application</p>
               </div>
             </div>
-            <div className="grid md-20">
+            <div className="grid md-20 xs-50">
               <div className="text-center">
                 <img src="/assets/img/bg/35.png" width="80" />
-                <p>Server & Application</p>
+                <p className="fw-500">Server & Application</p>
               </div>
             </div>
           </div>
-
-          {/*
-          <div className="d-flex ai-center jc-center mt-6 pt-6">
-            <img src="/assets/img/bg/40.png" width="500" />
-          </div>
-           */}
         </div>
       </section>
 
       <section className="section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-          <SubTitle subTitle="Why NNMX - See Our Use Cases"/>
-            <p className="mt-4">
+            <SubTitle
+              subTitle="Why NNMX - See Our Use Cases"
+              isCentered={true}
+            />
+            <p className="mt-4 color-gray">
               NNMX is able to provide more insight into IT network performance
               and connectivity. Below are example of use case scenarios to see
               how our NNMX can solve your network issues and improve your
@@ -103,23 +98,28 @@ function ProductsPage03(props) {
           </div>
           <div className="grids">
             {[
-              "/assets/img/bg/32.jpg",
-              "/assets/img/bg/32.jpg",
-              "/assets/img/bg/32.jpg",
-              "/assets/img/bg/32.jpg",
+              "/assets/img/bg/53.jpg",
+              "/assets/img/bg/53.jpg",
+              "/assets/img/bg/53.jpg",
+              "/assets/img/bg/53.jpg",
             ].map((d, i) => (
-              <div key={`card_${i}`} className="grid md-25">
+              <div key={`card_${i}`} className="grid lg-25 md-50">
                 <div className="pt-5">
                   <SpecialImage image={d} goTo={`/content/${i}`} />
                   <div className="ss-sep-01 bg-p mt-5"></div>
                   <div className="mt-4">
-                    <Link className="h6 fw-600 h-color-p" to={`/content/${i}`}>
-                      MONITOR YOUR BUSINESS SERVERS AND APPLICATIONS
-                    </Link>
-                    <p>
-                      One of the important physical security is used by most
-                      everyone, whether it is a private installatio
-                    </p>
+                    <div className="ss-text-wrapper">
+                      <Link
+                        className="h6 fw-600 h-color-p"
+                        to={`/content/${i}`}
+                      >
+                        MONITOR YOUR BUSINESS SERVERS AND APPLICATIONS
+                      </Link>
+                      <p className="color-gray mt-2">
+                        One of the important physical security is used by most
+                        everyone, whether it is a private installatio
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -138,196 +138,216 @@ function ProductsPage03(props) {
         style={{ backgroundImage: `url('/assets/img/bg/23.jpg')` }}
       >
         <div className="ss-text-wrapper text-center">
-        <SubTitle subTitle="Intelligent IT Infrastructure Management Solutions" colorClasser={'color-white'}/>
-
-          <p>
-            NNMX provides Fault, Configuration, Accounting, Performance and
-            Security management (FCAPS) that is aligned with ITU-T M.3040 (TMN)
-            which is a standard ISO network management framework.
-          </p>
+          <h1 className="color-white text-center">
+            Netka AIOps Director <br />
+            The Ultimate AIOps Solution
+          </h1>
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-08 section-padding">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-          <SubTitle subTitle="Technologies And Innovations" isCentered={true}/>
-            <p className="mt-4">
+            <SubTitle
+              subTitle="Technologies And Innovations"
+              isCentered={true}
+            />
+            <p className="mt-4 color-gray">
               NNMX is a major change of NetkaView Network Manager (NNM) with new
               technologies, those make the NNMX more intelligent ever,
-              combination with new GUI design, easily to use, various types of
-              feature that can address your needs.
+              combination with new GUI design,various types of feature that can
+              address your needs.
             </p>
           </div>
-          <div className="grids mt-6">
-            <div className="grid md-1-3">
-              <div className="grids">
-                <div className="grid md-20">
-                  <img src="/assets/img/bg/46.png" />
-                </div>
-                <div className="grid md-80 pl-3">
-                  <h6>Multi-X Management</h6>
-                  <div className="mt-4"></div>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Vendor
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Networking technologies
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" /> Multi-OS
-                    platform
-                  </p>
 
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Scale infrastructure
-                  </p>
+          <div className="grids mt-0 pt-6">
+            <div className="grid lg-1-3 md-50 sm-50 xs-100">
+              <div className="grid mt-0">
+                <div className="item-card">
+                  <div className="icon-wrapper">
+                    <img src="/assets/img/bg/46.png" />
+                  </div>
+                  <div className="text-wrapper color-gray">
+                    <h6 className="fw-500 h-color-p color-dark">
+                      Multi-X Management
+                    </h6>
+                    <p className="mt-2">
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Vendor
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Networking technologies
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-OS platform
+                    </p>
+
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Scale infrastructure
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="grid md-1-3">
-              <div className="grids">
-                <div className="grid md-20">
-                  <img src="/assets/img/bg/47.png" />
-                </div>
-                <div className="grid md-80 pl-3">
-                  <h6>Multi-X Management</h6>
-                  <div className="mt-4"></div>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Vendor
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Networking technologies
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" /> Multi-OS
-                    platform
-                  </p>
 
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Scale infrastructure
-                  </p>
+            <div className="grid lg-1-3 md-50 sm-50 xs-100">
+              <div className="grid mt-0">
+                <div className="item-card">
+                  <div className="icon-wrapper">
+                    <img src="/assets/img/bg/47.png" />
+                  </div>
+                  <div className="text-wrapper color-gray">
+                    <h6 className="fw-500 h-color-p color-dark">
+                      Multi-X Management
+                    </h6>
+                    <p className="mt-2">
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Vendor
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Networking technologies
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-OS platform
+                    </p>
+
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Scale infrastructure
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="grid md-1-3">
-              <div className="grids">
-                <div className="grid md-20">
-                  <img src="/assets/img/bg/48.png" />
-                </div>
-                <div className="grid md-80 pl-3">
-                  <h6>Multi-X Management</h6>
-                  <div className="mt-4"></div>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Vendor
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Networking technologies
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" /> Multi-OS
-                    platform
-                  </p>
 
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Scale infrastructure
-                  </p>
+            <div className="grid lg-1-3 md-50 sm-50 xs-100">
+              <div className="grid mt-0">
+                <div className="item-card">
+                  <div className="icon-wrapper">
+                    <img src="/assets/img/bg/48.png" />
+                  </div>
+                  <div className="text-wrapper color-gray">
+                    <h6 className="fw-500 h-color-p color-dark">
+                      Multi-X Management
+                    </h6>
+                    <p className="mt-2">
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Vendor
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Networking technologies
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-OS platform
+                    </p>
+
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Scale infrastructure
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="grids mt-6">
-            <div className="grid md-1-3">
-              <div className="grids">
-                <div className="grid md-20">
-                  <img src="/assets/img/bg/49.png" />
-                </div>
-                <div className="grid md-80 pl-3">
-                  <h6>Multi-X Management</h6>
-                  <div className="mt-4"></div>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Vendor
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Networking technologies
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" /> Multi-OS
-                    platform
-                  </p>
+            <div className="grid lg-1-3 md-50 sm-50 xs-100">
+              <div className="grid mt-0">
+                <div className="item-card">
+                  <div className="icon-wrapper">
+                    <img src="/assets/img/bg/49.png" />
+                  </div>
+                  <div className="text-wrapper color-gray">
+                    <h6 className="fw-500 h-color-p color-dark">
+                      Multi-X Management
+                    </h6>
+                    <p className="mt-2">
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Vendor
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Networking technologies
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-OS platform
+                    </p>
 
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Scale infrastructure
-                  </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Scale infrastructure
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="grid md-1-3">
-              <div className="grids">
-                <div className="grid md-20">
-                  <img src="/assets/img/bg/50.png" />
-                </div>
-                <div className="grid md-80 pl-3">
-                  <h6>Multi-X Management</h6>
-                  <div className="mt-4"></div>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Vendor
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Networking technologies
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" /> Multi-OS
-                    platform
-                  </p>
 
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Scale infrastructure
-                  </p>
+            <div className="grid lg-1-3 md-50 sm-50 xs-100">
+              <div className="grid mt-0">
+                <div className="item-card">
+                  <div className="icon-wrapper">
+                    <img src="/assets/img/bg/50.png" />
+                  </div>
+                  <div className="text-wrapper color-gray">
+                    <h6 className="fw-500 h-color-p color-dark">
+                      Multi-X Management
+                    </h6>
+                    <p className="mt-2">
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Vendor
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Networking technologies
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-OS platform
+                    </p>
+
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Scale infrastructure
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="grid md-1-3">
-              <div className="grids">
-                <div className="grid md-20">
-                  <img src="/assets/img/bg/51.png" />
-                </div>
-                <div className="grid md-80 pl-3">
-                  <h6>Multi-X Management</h6>
-                  <div className="mt-4"></div>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Vendor
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Networking technologies
-                  </p>
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" /> Multi-OS
-                    platform
-                  </p>
+            <div className="grid lg-1-3 md-50 sm-50 xs-100">
+              <div className="grid mt-0">
+                <div className="item-card">
+                  <div className="icon-wrapper">
+                    <img src="/assets/img/bg/51.png" />
+                  </div>
+                  <div className="text-wrapper color-gray">
+                    <h6 className="fw-500 h-color-p color-dark">
+                      Multi-X Management
+                    </h6>
+                    <p className="mt-2">
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Vendor
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Networking technologies
+                    </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-OS platform
+                    </p>
 
-                  <p>
-                    <ChevronRight size="15" className="mr-2 chevron" />{" "}
-                    Multi-Scale infrastructure
-                  </p>
+                    <p>
+                      <ChevronRight size="15" className="mr-2 chevron" />{" "}
+                      Multi-Scale infrastructure
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -335,11 +355,13 @@ function ProductsPage03(props) {
         </div>
       </section>
 
-      <section className="section-padding bg-s">
+      <section className="section-10 section-padding bg-s">
         <div className="container">
           <div className="ss-text-wrapper text-center">
-            <h2 className="color-white">Network Monitoring Hardware</h2>
-            <div className="ss-sep-01 ss-sep-center bg-p mt-4"></div>
+            <TextTitle
+              title="Network Monitoring Hardware"
+              colorClasser="color-white"
+            />
             <p className="mt-4">
               NNMX Appliance is a hardware-based platform for small to medium
               size IT infrastructure. The solution provides comprehensive
@@ -347,13 +369,15 @@ function ProductsPage03(props) {
               and security devices, servers, applications, etc.
             </p>
           </div>
-          <div className="grids mt-6 pt-6">
-            <div className="grid md-50">
-              <img src="/assets/img/bg/40.png" className="img" />
+          <div className="grids ai-center mt-6 pt-6">
+            <div className="grid lg-50 sm-100">
+              <div className="image-wrapper">
+                <img src="/assets/img/bg/40.png" className="img" />
+              </div>
             </div>
-            <div className="grid md-50 m-0">
-              <div className="pl-3">
-                <h3 className="color-white">Discover Music</h3>
+            <div className="grid lg-50 sm-100 m-0">
+              <div className="ss-text-wrapper xs">
+                <SubTitle subTitle="Discover Music" colorClasser="color-white"/>
                 <p className="mt-3">
                   <ChevronRight size="15" className="mr-2 chevron" /> Plug and
                   Play
@@ -415,8 +439,8 @@ function ProductsPage03(props) {
 
       <section className="section-padding">
         <div className="container">
-          <div className="ss-text-wrapper">
-            <h3>Get Connected</h3>
+          <div className="ss-text-wrapper color-gray">
+            <SubTitle subTitle="Get Connected" />
             <p>Get yourself ready for an awesome experience with NNMX</p>
           </div>
         </div>

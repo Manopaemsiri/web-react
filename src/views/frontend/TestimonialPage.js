@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { onMounted } from "../../helpers/frontend";
 import SpecialImage from "../../components/SpecialImage";
-import { Clock } from "react-feather";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "react-feather";
 import { connect } from "react-redux";
@@ -17,7 +16,7 @@ function TestimonialsPage(props) {
 
   return (
     <>
-      <section className="section-news-01 d-flex ai-center">
+      <section className="section-06">
         <div className="container">
           <p className="d-flex ai-center text-sm color-white">
             Home <ChevronRight size="15" className="ml-2 mr-2" /> Testimonials
@@ -27,72 +26,77 @@ function TestimonialsPage(props) {
         </div>
       </section>
 
-      <section className="section-testimonials section-padding">
+      <section className="section-padding">
         <div className="container">
           <div className="grids">
-            <div className="grid md-70 sm-100">
-              <div className="pr-6">
+            <div className="grid lg-70 md-60 sm-100 mt-0">
+              <div className="panel-left">
                 {[
-                  "/assets/img/bg/29.jpeg",
-                  "/assets/img/bg/29.jpeg",
-                  "/assets/img/bg/29.jpeg",
-                  "/assets/img/bg/29.jpeg",
+                  "/assets/img/bg/72.jpg",
+                  "/assets/img/bg/71.jpg",
+                  "/assets/img/bg/73.jpg",
+                  "/assets/img/bg/74.jpg",
                 ].map((d, i) => (
-                  <div key={`card_${i}`} className="mb-6 pb-6">
-                    <SpecialImage image={d} goTo={`/content/${i}`} />
-                    <h4 className="mt-4">
-                      AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS
-                      WORKING BEYOND THEIR EXPECTATIONS
-                    </h4>
-                    <div className="ss-sep-01 bg-p mt-3"></div>
-
-                    <div className="btn-wrapper mt-6 pt-6">
-                      <Link to="/" className="btn btn-action btn-p">
-                        READ MORE
+                  <div key={`card_${i}`}>
+                    <SpecialImage
+                      image={d}
+                      goTo={`/content/${i}`}
+                      classer={"no-hover"}
+                    />
+                    <div className="mt-4 mb-6">
+                      <Link to="/" className="h4 fw-500 h-color-p">
+                        AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS
+                        WORKING BEYOND THEIR EXPECTATIONS
                       </Link>
+                      <div className="ss-sep-01 bg-p mt-3"></div>
+                      <div className="btns mb-6 pb-6">
+                        <Link to="/" className="btn btn-action btn-p">
+                          READ MORE
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="grid md-30 sm-100 m-0">
-              <div className="right-content ">
+            <div className="grid lg-30 md-40 sm-100 m-0">
+              <div className="panel-right">
                 <ul className="bg-p p-5 color-white box-shadow">
                   <li>
-                    <Link to="/" className="p color-white">
+                    <Link to="/" className="p ">
                       What is AIOps?
                     </Link>
                   </li>
                   <li>
-                    <Link to="/" className="p color-white">
+                    <Link to="/" className="p">
                       What does AIOps relate with IT Operations?
                     </Link>
                   </li>
                   <li>
-                    <Link to="/" className="p color-white">
+                    <Link to="/" className="p">
                       AIOps Benefits
                     </Link>
                   </li>
                   <li>
-                    <Link to="/" className="p color-white">
+                    <Link to="/" className="p">
                       AIOps for Monitoring
                     </Link>
                   </li>
                   <li>
-                    <Link to="/" className="p color-white">
+                    <Link to="/" className="p">
                       AIOps for ITSM
                     </Link>
                   </li>
                   <li>
-                    <Link to="/" className="p color-white">
+                    <Link to="/" className="p">
                       AIOps for Automation
                     </Link>
                   </li>
                 </ul>
 
-                <div className="bg-s color-white p-5 box-shadow">
+                <div className="bg-s color-white p-5 mt-4 box-shadow">
                   <h4>LOREM IPSUM</h4>
-                  <div className="contact-container mt-4">
+                  <div className="mt-4">
                     <p>Call Us</p>
                     <p>097 305 2239</p>
                   </div>

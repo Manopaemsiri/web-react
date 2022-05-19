@@ -36,19 +36,19 @@ function ProductsPage(props) {
       <section className="section-03 section-padding">
         <div className="container">
           <TextTitle title="Netka AIOps Director" />
-          <div className="ss-text-wrapper sm ml-0 mt-6 pt-6 color-gray">
-            <SubTitle subTitle="What Is Netka AIOps Director ?" />
-            <p>
+          <div className="ss-text-wrapper sm text-center">
+            <h4 className="mt-3">What Is Netka AIOps Director</h4>
+            <p className="color-gray lh-md">
               Netka AIOps Director or N-AIOps is AIOps Platform which provides
               data ingestion data analytics by using AI technologies and
               intelligently drive automation
             </p>
           </div>
-          <div className="grids ai-center pt-6">
+          <div className="grids ai-center mt-6 pt-6">
             <div className="grid lg-50 sm-100 xs-100 mt-0">
               <div className="ss-text-wrapper xs color-gray text-left ml-0">
                 <SubTitle subTitle="Overview" />
-                <p className="mt-2">
+                <p className="mt-2 lh-md">
                   Netka AIOps Director or N-AIOps is AIOps Platform which
                   provides data ingestion, data analytics by using AI
                   technologies and intelligently drive automation. N-AIOps have
@@ -76,10 +76,7 @@ function ProductsPage(props) {
             </div>
             <div className="grid lg-50 sm-100 xs-100 mt-0">
               <div className="img-wrapper">
-                <SpecialImage
-                  image="/assets/img/bg/21.jpg"
-                  classer="no-hover"
-                />
+              <img src="/assets/img/bg/65.png" className="img" />
               </div>
             </div>
           </div>
@@ -93,12 +90,12 @@ function ProductsPage(props) {
             <img src="/assets/img/bg/18.jpg" className="img" />
           </div>
           <div className="ss-text-wrapper lg ml-0 color-gray">
-            <p className="mt-6">
+            <p className="mt-6 lh-md">
               N-AIOps can work with 3rd party application which send data with
               Syslog, SNMP Trap or JSON format and work seamlessly with Netka
               products including
             </p>
-            <p className="mt-4">
+            <p className="mt-4 lh-md">
               Netka AIOps Director or N-AIOps is AIOps Platform which provides
               data ingestion, data analytics by using AI technologies and
               intelligently drive automation. N-AIOps have workflow designer which
@@ -108,7 +105,7 @@ function ProductsPage(props) {
               DEM for cross-domain analysis and drive automation. N-AIOps supports
               data for processing as follow:
             </p>
-            <p className="mt-4">
+            <p className="mt-4 lh-md">
               Netka AIOps Director or N-AIOps is AIOps Platform which provides
               data ingestion, data analytics by using AI technologies and
               intelligently drive automation. N-AIOps have workflow designer which
@@ -119,7 +116,7 @@ function ProductsPage(props) {
               data for processing as follow:
             </p>
             <SubTitle subTitle="The Netka AIOps’s Life Cycle" isCentered={false} />
-            <p className="mt-4">
+            <p className="mt-4 lh-md">
               When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
               ultimate AIOps Solution” which provides cross-domain analysis for IT
               Infrastructure Management, IT Service Management, Network
@@ -128,7 +125,7 @@ function ProductsPage(props) {
               Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
               as follow:
             </p>
-            <p className="mt-4">
+            <p className="mt-4 lh-md">
               When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
               ultimate AIOps Solution” which provides cross-domain analysis for IT
               Infrastructure Management, IT Service Management, Network
@@ -137,7 +134,7 @@ function ProductsPage(props) {
               Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
               as follow:
             </p>
-            <p className="mt-4">
+            <p className="mt-4 lh-md">
               When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
               ultimate AIOps Solution” which provides cross-domain analysis for IT
               Infrastructure Management, IT Service Management, Network
@@ -180,7 +177,7 @@ function ProductsPage(props) {
             <div className="grid lg-50 sm-100 xs-100 mt-0">
               <div className="ss-text-wrapper sm ml-0">
                 <SubTitle subTitle="Sample Use Cases Of N-AIOps" />
-                <p className="mt-2 color-gray">
+                <p className="mt-2 color-gray lh-md">
                   N-AIOps can start workflow and run playbook into CIs when
                   incoming log matched predefined rule. Also, N-AIOps can detect
                   anomaly and finding root cause from cross-domain analysis. For
@@ -198,6 +195,60 @@ function ProductsPage(props) {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-11 bg-s section-padding">
+        <div className="container">
+          <div className="ss-text-wrapper text-center color-gray">
+            <SubTitle subTitle="The Netka AIOps’s Life Cycle" isCentered={true} colorClasser={'color-white'} />
+            <p className="mt-3">
+              NLG is logger, packet analyzer, flow analyzer and event management
+              tools including event suppression, event correlation, event action
+              and alerting.
+            </p>
+          </div>
+          <div className="grids mt-6">
+            <div className="grid md-1-3">
+              <div className="ss-text-wrapper">
+                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
+                <p className="mt-2 color-gray">
+                  Provides flexibility and useful customization with Business
+                  Intelligence tool to support user defined dashboards for big
+                  data analytics.
+                </p>
+              </div>
+            </div>
+            <div className="grid md-1-3">
+              <div className="ss-text-wrapper">
+                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
+                <p className="mt-2 color-gray">
+                  Provides flexibility and useful customization with Business
+                  Intelligence tool to support user defined dashboards for big
+                  data analytics.
+                </p>
+              </div>
+            </div>
+            <div className="grid md-1-3">
+              <div className="ss-text-wrapper">
+                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
+                <p className="mt-2 color-gray">
+                  Provides flexibility and useful customization with Business
+                  Intelligence tool to support user defined dashboards for big
+                  data analytics.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding">
+        <div className="container">
+          <div className="ss-text-wrapper color-gray">
+            <SubTitle subTitle="Get Connected" />
+            <p>Get yourself ready for an awesome experience with NNMX</p>
           </div>
         </div>
       </section>
