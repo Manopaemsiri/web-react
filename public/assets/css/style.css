@@ -100,7 +100,7 @@ p.xs, .p.xs, label.xs, li.xs{font-size:.875rem;}
 /* Ordered List & Unordered List */
 ol, ul{padding:0 0 0 1.125rem; margin:0;}
 ol li, ul li{padding:0 0 0 .5rem; margin:.25rem 0 0 0;}
-ul{list-style:square;}
+ul{list-style:none;} 
 ol{list-style:none; counter-reset:item;}
 ol > li{position:relative;}
 ol > li:before{
