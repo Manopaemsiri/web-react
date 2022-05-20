@@ -25,7 +25,7 @@ function ServicesPage(props) {
   return (
     <>
       <Breadcrumb 
-        bgImage="/assets/img/bg/17.jpg" 
+        bgImage="/assets/img/bg/23.jpg" 
         structure={[
           { title: 'Services', goTo: null },
         ]} 
@@ -38,28 +38,28 @@ function ServicesPage(props) {
             {[
               {
                 name: 'Web App Development', activeIndex: 12, goTo: '/service/web-app-development',
-                bgImage: '/assets/img/bg/02.jpg'
+                bgImage: '/assets/img/bg/32.jpg'
               }, {
                 name: 'Mobile App Development', activeIndex: 13, goTo: '/service/mobile-app-development',
-                bgImage: '/assets/img/bg/02.jpg'
+                bgImage: '/assets/img/bg/75.jpg'
               }, {
                 name: 'IOT & Smart Farming', activeIndex: 14, goTo: '/service/iot-and-smart-farming',
-                bgImage: '/assets/img/bg/02.jpg'
+                bgImage: '/assets/img/bg/76.jpg'
               }, {
                 name: 'AI & Machine Learning', activeIndex: 15, goTo: '/service/ai-and-machine-learning',
-                bgImage: '/assets/img/bg/02.jpg'
+                bgImage: '/assets/img/bg/77.jpg'
               }, {
                 name: 'Data Analytics & Visualization', activeIndex: 16, goTo: '/service/data-analytics-and-visualization',
-                bgImage: '/assets/img/bg/02.jpg'
+                bgImage: '/assets/img/bg/78.jpg'
               }, {
                 name: 'Product & Brand Identity', activeIndex: 17, goTo: '/service/product-and-brand-identity',
-                bgImage: '/assets/img/bg/02.jpg'
+                bgImage: '/assets/img/bg/79.jpg'
               }, {
                 name: 'Technology Research', activeIndex: 18, goTo: '/service/technology-research',
-                bgImage: '/assets/img/bg/02.jpg'
+                bgImage: '/assets/img/bg/09.jpg'
               }, {
                 name: 'Decentralized App (DApp)', activeIndex: 19, goTo: '/service/decentralized-app',
-                bgImage: '/assets/img/bg/02.jpg'
+                bgImage: '/assets/img/bg/80.jpg'
               },{
                 name: 'IT Consultant', activeIndex: 20, goTo: '/service/it-consultant',
                 bgImage: '/assets/img/bg/02.jpg'

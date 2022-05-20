@@ -21,7 +21,7 @@ function ProductsPage03(props) {
   return (
     <>
       <section
-        className="section-05 bg-fixed section-padding"
+        className="section-05 bg-sm bg-fixed section-padding"
         style={{ backgroundImage: `url('/assets/img/bg/58.jpg')` }}
       >
         <div className="container">

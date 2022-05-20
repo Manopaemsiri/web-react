@@ -2,61 +2,69 @@ import { useEffect } from "react";
 import { onMounted } from "../../helpers/frontend";
 import SpecialImage from "../../components/SpecialImage";
 import { Link } from "react-router-dom";
-import { ChevronRight } from "react-feather";
+
+import Breadcrumb from '../../components/Breadcrumb';
+
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
 function TestimonialsPage(props) {
   /* eslint-disable */
   useEffect(() => {
-    onMounted(true);
+    onMounted(1);
     props.setTopnavActiveIndex(31);
   }, []);
   /* eslint-enable */
 
   return (
     <>
-      <section className="section-06">
-        <div className="container">
-          <p className="d-flex ai-center text-sm color-white">
-            Home <ChevronRight size="15" className="ml-2 mr-2" /> Testimonials
-          </p>
-          <h3 className="fw-800 mt-2 color-white">Testimonials</h3>
-          <div className="ss-sep-01 bg-white mt-4"></div>
-        </div>
-      </section>
+
+      <Breadcrumb
+        bgImage="/assets/img/bg/23.jpg"
+        structure={[
+          { title: 'Testimonials', goTo: null },
+        ]}
+        title="Testimonials"
+      />
 
       <section className="section-padding">
         <div className="container">
           <div className="grids">
-            <div className="grid lg-70 md-60 sm-100 mt-0">
+            <div className="grid lg-70 md-60 sm-100 mt-0 p-0">
               <div className="panel-left">
                 {[
-                  "/assets/img/bg/72.jpg",
-                  "/assets/img/bg/71.jpg",
-                  "/assets/img/bg/73.jpg",
-                  "/assets/img/bg/74.jpg",
+                  {
+                    title: 'AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS WORKING BEYOND THEIR EXPECTATIONS',activeIndex: 32, goTo: '/testimonials/testimonial-content-01',
+                    bgImage: '/assets/img/bg/72.jpg'
+                  }, {
+                    title: 'AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS WORKING BEYOND THEIR EXPECTATIONS',activeIndex: 33, goTo: '/testimonials/testimonial-content-02',
+                    bgImage: '/assets/img/bg/71.jpg'
+                  }, {
+                    title: 'AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS WORKING BEYOND THEIR EXPECTATIONS',activeIndex: 34, goTo: '/testimonials/testimonial-content-03',
+                    bgImage: '/assets/img/bg/73.jpg'
+                  }, {
+                    title: 'AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS WORKING BEYOND THEIR EXPECTATIONS',activeIndex: 35, goTo: '/testimonials/testimonial-content-04',
+                    bgImage: '/assets/img/bg/74.jpg'
+                  },
                 ].map((d, i) => (
-                  <div key={`card_${i}`}>
-                    <SpecialImage
-                      image={d}
-                      goTo={`/content/${i}`}
-                      classer={"no-hover"}
-                    />
-                    <div className="mt-4 mb-6">
-                      <Link to="/" className="h4 fw-500 h-color-p">
-                        AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS
-                        WORKING BEYOND THEIR EXPECTATIONS
-                      </Link>
-                      <div className="ss-sep-01 bg-p mt-3"></div>
-                      <div className="btns mb-6 pb-6">
-                        <Link to="/" className="btn btn-action btn-p">
-                          READ MORE
+                  <div key={`card_${i}`} >
+                    <div className="">
+                      <SpecialImage image={d.bgImage} goTo={d.goTo} classer={'no-hover'} />
+                      <div className="mt-4">
+                        <Link className="h6 fw-600 h-color-p" to={d.goTo}>
+                          {d.title}
                         </Link>
+                        <div className="ss-sep-01 bg-p mt-3"></div>
+                        <div className="btns mb-6 pb-6">
+                          <Link to={d.goTo} className="btn btn-action btn-p">
+                            READ MORE
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
+
               </div>
             </div>
             <div className="grid lg-30 md-40 sm-100 m-0">

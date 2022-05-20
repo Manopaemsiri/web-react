@@ -9,13 +9,13 @@ import SubTitle from "../../components/SubTitle";
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
-function ProductsPage(props) {
+function Testimonial(props) {
   const dataUrl = props.match.params.dataUrl ? props.match.params.dataUrl : null;
 
   /* eslint-disable */
   useEffect(() => {
     onMounted(1);
-    props.setTopnavActiveIndex(21);
+    props.setTopnavActiveIndex(31);
   }, []);
   /* eslint-enable */
 
@@ -261,4 +261,4 @@ const mapStateToProps = (state) => ({});
 
 export default connect(mapStateToProps, {
   setTopnavActiveIndex: setTopnavActiveIndex,
-})(ProductsPage);
+})(Testimonial);
