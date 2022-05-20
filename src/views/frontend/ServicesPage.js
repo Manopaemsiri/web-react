@@ -31,7 +31,7 @@ function ServicesPage(props) {
       <section className="section-padding">
         <div className="container">
           <div className="grids">
-            <div className="grid md-70 sm-100 xs-100">
+            <div className="grid lg-70 md-60 sm-100">
               <div className="panel-left">
                 <div className="ss-text-wrapper color-gray">
                   <TextTitle title="AIOps" isCentered={false} />
@@ -191,7 +191,7 @@ function ServicesPage(props) {
                 </div>
               </div>
             </div>
-            <div className="grid md-30 sm-100 xs-100">
+            <div className="grid lg-30 md-40 sm-100">
               <div className="panel-right">
                 <ul className="bg-p p-5 color-white box-shadow">
                   <li>
