@@ -9,13 +9,14 @@ import SubTitle from "../../components/SubTitle";
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
-function ProductPage(props) {
-  const dataUrl = props.match.params.dataUrl ? props.match.params.dataUrl : null;
+
+function NewPage(props) {
+  const dataUrl = props.match.params.dataUrl? props.match.params.dataUrl: null;
 
   /* eslint-disable */
   useEffect(() => {
     onMounted(1);
-    props.setTopnavActiveIndex(21);
+    props.setTopnavActiveIndex(11);
   }, []);
   /* eslint-enable */
 
@@ -77,7 +78,7 @@ function ProductPage(props) {
             </div>
             <div className="grid lg-50 sm-100 xs-100 mt-0">
               <div className="img-wrapper">
-                <img src="/assets/img/bg/65.png" className="img" />
+              <img src="/assets/img/bg/65.png" className="img" />
               </div>
             </div>
           </div>
@@ -167,7 +168,7 @@ function ProductPage(props) {
         <div className="container">
           <div className="grids ai-center">
             <div className="grid lg-50 sm-100 xs-100">
-              <div className="img-wrapper">
+            <div className="img-wrapper">
                 <SpecialImage
                   image="/assets/img/bg/24.png"
                   classer="no-hover"
@@ -261,4 +262,4 @@ const mapStateToProps = (state) => ({});
 
 export default connect(mapStateToProps, {
   setTopnavActiveIndex: setTopnavActiveIndex,
-})(ProductPage);
+})(NewPage);

@@ -79,13 +79,13 @@ function Header(props) {
         ]
       }, {
         name: 'PRODUCTS',
-        goTo: '/product',
+        goTo: '/products',
         activeIndexes: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
         children: [
           {
-            name: 'Tech Origin ERP', activeIndex: 22, goTo: '/products/tech-origin-erp'
+            name: 'Tech Origin ERP', activeIndex: 22, goTo: '/product/tech-origin-erp'
           }, {
-            name: 'Management Software', activeIndex: 23, goTo: '/products/management-software'
+            name: 'Management Software', activeIndex: 23, goTo: '/product/management-software'
           }, 
         ]
       }, {

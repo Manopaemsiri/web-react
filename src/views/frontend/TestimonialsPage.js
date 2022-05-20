@@ -1,17 +1,14 @@
 import { useEffect } from "react";
 import { onMounted } from "../../helpers/frontend";
+import SpecialImage from "../../components/SpecialImage";
 import { Link } from "react-router-dom";
 
-import SpecialImage from "../../components/SpecialImage";
-import TextTitle from "../../components/TextTitle";
-import SubTitle from "../../components/SubTitle";
+import Breadcrumb from '../../components/Breadcrumb';
 
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
-function Testimonial(props) {
-  const dataUrl = props.match.params.dataUrl ? props.match.params.dataUrl : null;
-
+function TestimonialsPage(props) {
   /* eslint-disable */
   useEffect(() => {
     onMounted(1);
@@ -21,235 +18,142 @@ function Testimonial(props) {
 
   return (
     <>
-      <section
-        className="section-05 bg-sm bg-fixed section-padding"
-        style={{ backgroundImage: `url('/assets/img/bg/17.jpg')` }}
-      >
-        <div className="container">
-          <div className="ss-text-wrapper text-center">
-            <h1 className="color-white fw-700 lh-sm xs-no-br">
-              {dataUrl}
-            </h1>
-          </div>
-        </div>
-      </section>
 
-      <section className="section-03 section-padding">
-        <div className="container">
-          <TextTitle title="Netka AIOps Director" />
-          <div className="ss-text-wrapper sm text-center">
-            <h4 className="mt-3">What Is Netka AIOps Director</h4>
-            <p className="color-gray lh-md">
-              Netka AIOps Director or N-AIOps is AIOps Platform which provides
-              data ingestion data analytics by using AI technologies and
-              intelligently drive automation
-            </p>
-          </div>
-          <div className="grids ai-center mt-6 pt-6">
-            <div className="grid lg-50 sm-100 xs-100 mt-0">
-              <div className="ss-text-wrapper xs color-gray text-left ml-0">
-                <SubTitle subTitle="Overview" />
-                <p className="mt-2 lh-md">
-                  Netka AIOps Director or N-AIOps is AIOps Platform which
-                  provides data ingestion, data analytics by using AI
-                  technologies and intelligently drive automation. N-AIOps have
-                  workflow designer which is tool for creating automation
-                  process that can flexibly design workflow with complex
-                  conditions. N-AIOps is platform which require data from IT
-                  management systems e.g. ITIM, ITSM, NPMD, SIEM, APM, DEM for
-                  cross-domain analysis and drive automation. N-AIOps supports
-                  data for processing as follow:
-                </p>
-                <ol>
-                  <li>Log data e.g. Syslog, SNMP Trap, Windows event</li>
-                  <li>Telemetry data e.g. metrics, traces</li>
-                  <li>
-                    Network data e.g. packet analysis data, flow analysis data,
-                    topology, inventory
-                  </li>
-                  <li>ITSM data e.g. incidents, changes, problems, Cis</li>
-                  <li>
-                    IoT data or sensor values g. temperature, humidity, AC/DC
-                    voltage, current, watt, relay, contact, access door’s status
-                  </li>
-                </ol>
-              </div>
-            </div>
-            <div className="grid lg-50 sm-100 xs-100 mt-0">
-              <div className="img-wrapper">
-                <img src="/assets/img/bg/65.png" className="img" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Breadcrumb
+        bgImage="/assets/img/bg/23.jpg"
+        structure={[
+          { title: 'Testimonials', goTo: null },
+        ]}
+        title="Testimonials"
+      />
 
       <section className="section-padding">
         <div className="container">
-          <TextTitle title="Netka AIOps Director, The Ultimate AIOps Solution" />
-          <div className="mt-6 pt-2">
-            <img src="/assets/img/bg/18.jpg" className="img" />
-          </div>
-          <div className="ss-text-wrapper lg ml-0 color-gray">
-            <p className="mt-6 lh-md">
-              N-AIOps can work with 3rd party application which send data with
-              Syslog, SNMP Trap or JSON format and work seamlessly with Netka
-              products including
-            </p>
-            <p className="mt-4 lh-md">
-              Netka AIOps Director or N-AIOps is AIOps Platform which provides
-              data ingestion, data analytics by using AI technologies and
-              intelligently drive automation. N-AIOps have workflow designer which
-              is tool for creating automation process that can flexibly design
-              workflow with complex conditions. N-AIOps is platform which require
-              data from IT management systems e.g. ITIM, ITSM, NPMD, SIEM, APM,
-              DEM for cross-domain analysis and drive automation. N-AIOps supports
-              data for processing as follow:
-            </p>
-            <p className="mt-4 lh-md">
-              Netka AIOps Director or N-AIOps is AIOps Platform which provides
-              data ingestion, data analytics by using AI technologies and
-              intelligently drive automation. N-AIOps have workflow designer which
-              is tool for creating automation process that can flexibly design
-              workflow with complex conditions. N-AIOps is platform which require
-              data from IT management systems e.g. ITIM, ITSM, NPMD, SIEM, APM,
-              DEM for cross-domain analysis and drive automation. N-AIOps supports
-              data for processing as follow:
-            </p>
-            <SubTitle subTitle="The Netka AIOps’s Life Cycle" isCentered={false} />
-            <p className="mt-4 lh-md">
-              When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
-              ultimate AIOps Solution” which provides cross-domain analysis for IT
-              Infrastructure Management, IT Service Management, Network
-              Performance Monitoring and Diagnostics, Security Information and
-              Event Management, Application Performance Monitoring and Digital
-              Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
-              as follow:
-            </p>
-            <p className="mt-4 lh-md">
-              When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
-              ultimate AIOps Solution” which provides cross-domain analysis for IT
-              Infrastructure Management, IT Service Management, Network
-              Performance Monitoring and Diagnostics, Security Information and
-              Event Management, Application Performance Monitoring and Digital
-              Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
-              as follow:
-            </p>
-            <p className="mt-4 lh-md">
-              When N-AIOps works with NNM, NSD, NLG, NIoT, this will be “The
-              ultimate AIOps Solution” which provides cross-domain analysis for IT
-              Infrastructure Management, IT Service Management, Network
-              Performance Monitoring and Diagnostics, Security Information and
-              Event Management, Application Performance Monitoring and Digital
-              Experience Monitoring. The Netka AIOps’s life cycle consists of 5A
-              as follow:
-            </p>
-          </div>
+          <div className="grids">
+            <div className="grid lg-70 md-60 sm-100 mt-0 p-0">
+              <div className="panel-left">
+                {[
+                  {
+                    title: 'AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS WORKING BEYOND THEIR EXPECTATIONS',activeIndex: 32, goTo: '/testimonial/testimonial-content-01',
+                    bgImage: '/assets/img/bg/72.jpg'
+                  }, {
+                    title: 'AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS WORKING BEYOND THEIR EXPECTATIONS',activeIndex: 33, goTo: '/testimonial/testimonial-content-02',
+                    bgImage: '/assets/img/bg/71.jpg'
+                  }, {
+                    title: 'AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS WORKING BEYOND THEIR EXPECTATIONS',activeIndex: 34, goTo: '/testimonial/testimonial-content-03',
+                    bgImage: '/assets/img/bg/73.jpg'
+                  }, {
+                    title: 'AMARIN BOOK CENTER REVEALS NETKAQUARTZ SERVICE DESK IS WORKING BEYOND THEIR EXPECTATIONS',activeIndex: 35, goTo: '/testimonial/testimonial-content-04',
+                    bgImage: '/assets/img/bg/74.jpg'
+                  },
+                ].map((d, i) => (
+                  <div key={`card_${i}`} >
+                    <div className="">
+                      <SpecialImage image={d.bgImage} goTo={d.goTo} classer={'no-hover'} />
+                      <div className="mt-4">
+                        <Link className="h6 fw-600 h-color-p" to={d.goTo}>
+                          {d.title}
+                        </Link>
+                        <div className="ss-sep-01 bg-p mt-3"></div>
+                        <div className="btns mb-6 pb-6">
+                          <Link to={d.goTo} className="btn btn-action btn-p">
+                            READ MORE
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
 
-        </div>
-      </section>
-
-      <section
-        className="section-05 bg-fixed bg-sm section-padding"
-        style={{ backgroundImage: `url('/assets/img/bg/23.jpg')` }}
-      >
-        <div className="container">
-          <div className="ss-text-wrapper text-center">
-            <h1 className="color-white fw-700 lh-sm xs-no-br">
-              Netka AIOps Director <br />
-              The Ultimate AIOps Solution
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-03 section-padding">
-        <div className="container">
-          <div className="grids ai-center">
-            <div className="grid lg-50 sm-100 xs-100">
-              <div className="img-wrapper">
-                <SpecialImage
-                  image="/assets/img/bg/24.png"
-                  classer="no-hover"
-                />
               </div>
             </div>
+            <div className="grid lg-30 md-40 sm-100 m-0">
+              <div className="panel-right">
+                <ul className="bg-p p-5 color-white box-shadow">
+                  <li>
+                    <Link to="/" className="p ">
+                      What is AIOps?
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="p">
+                      What does AIOps relate with IT Operations?
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="p">
+                      AIOps Benefits
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="p">
+                      AIOps for Monitoring
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="p">
+                      AIOps for ITSM
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/" className="p">
+                      AIOps for Automation
+                    </Link>
+                  </li>
+                </ul>
 
-            <div className="grid lg-50 sm-100 xs-100 mt-0">
-              <div className="ss-text-wrapper sm ml-0">
-                <SubTitle subTitle="Sample Use Cases Of N-AIOps" />
-                <p className="mt-2 color-gray lh-md">
-                  N-AIOps can start workflow and run playbook into CIs when
-                  incoming log matched predefined rule. Also, N-AIOps can detect
-                  anomaly and finding root cause from cross-domain analysis. For
-                  example, when user have bad experience from using an application
-                  because of slowness and disconnections. This kind of problem
-                  requires cross-domain analysis based on variety of data e.g.
-                  traffic utilization, cpu utilization, memory utilization, disk
-                  usage, network quality (latency, jitter, packet loss),
-                  hop-by-hop latency, end-to-end latency, trace/span data.
-                </p>
-                <div className="btns pt-4">
-                  <Link to="/" className="btn btn-action btn-p">
-                    CONTACT
-                  </Link>
+                <div className="bg-s color-white p-5 mt-4 box-shadow">
+                  <h4>LOREM IPSUM</h4>
+                  <div className="mt-4">
+                    <p>Call Us</p>
+                    <p>097 305 2239</p>
+                  </div>
+                  <div className="contact-container mt-4">
+                    <p>Facebook</p>
+                    <p>
+                      <a href="https://www.facebook.com/TechOriginTH">
+                        Tech Origin Co., Ltd.
+                      </a>
+                    </p>
+                  </div>
+                  <div className="contact-container mt-4">
+                    <p>Email</p>
+                    <p>sarun.seepun@gmail.com</p>
+                  </div>
+                </div>
+
+                <div className="bg-p color-white p-5 mt-5 box-shadow">
+                  <h4>HOW CAN WE HELP YOU ?</h4>
+                  <p className="color-white mt-5">
+                    Contact us at the Netka System to you or submit a business
+                    inquiry online.
+                  </p>
+                  <div className="btns pt-4 text-center">
+                    <Link to="/" className="btn btn-action btn-s">
+                      CONTACT
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="quotation box-shadow p-5 mt-5">
+                  <p>
+                    the company would continue to focus on expanding its current
+                    customer base for its core services while investing more
+                    particularly in the expansion of the data centers to prepare
+                    for growing customer demand for digital content consumption
+                    and other opportunities
+                  </p>
+                  <div className="ss-sep-01 bg-p mt-4"></div>
+                  <div className="quotation-profile mt-4 d-flex">
+                    <img src="https://www.netkasystem.com/wp-content/uploads/2020/03/proen-50x50.jpg"></img>
+                    <div className="pl-4">
+                      <p className="color-dark fw-600">Mr.Sarun Seepun</p>
+                      <p>Chief Executive Officer</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-11 bg-s section-padding">
-        <div className="container">
-          <div className="ss-text-wrapper text-center color-gray">
-            <SubTitle subTitle="The Netka AIOps’s Life Cycle" isCentered={true} colorClasser={'color-white'} />
-            <p className="mt-3">
-              NLG is logger, packet analyzer, flow analyzer and event management
-              tools including event suppression, event correlation, event action
-              and alerting.
-            </p>
-          </div>
-          <div className="grids mt-6">
-            <div className="grid md-1-3">
-              <div className="ss-text-wrapper">
-                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
-                <p className="mt-2 color-gray">
-                  Provides flexibility and useful customization with Business
-                  Intelligence tool to support user defined dashboards for big
-                  data analytics.
-                </p>
-              </div>
-            </div>
-            <div className="grid md-1-3">
-              <div className="ss-text-wrapper">
-                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
-                <p className="mt-2 color-gray">
-                  Provides flexibility and useful customization with Business
-                  Intelligence tool to support user defined dashboards for big
-                  data analytics.
-                </p>
-              </div>
-            </div>
-            <div className="grid md-1-3">
-              <div className="ss-text-wrapper">
-                <h6 className="h-color-p fw-600 color-white">Customizable BI Dashboard</h6>
-                <p className="mt-2 color-gray">
-                  Provides flexibility and useful customization with Business
-                  Intelligence tool to support user defined dashboards for big
-                  data analytics.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding">
-        <div className="container">
-          <div className="ss-text-wrapper color-gray">
-            <SubTitle subTitle="Get Connected" />
-            <p>Get yourself ready for an awesome experience with NNMX</p>
           </div>
         </div>
       </section>
@@ -261,4 +165,4 @@ const mapStateToProps = (state) => ({});
 
 export default connect(mapStateToProps, {
   setTopnavActiveIndex: setTopnavActiveIndex,
-})(Testimonial);
+})(TestimonialsPage);
