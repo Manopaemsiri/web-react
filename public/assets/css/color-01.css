@@ -3,7 +3,6 @@
 :root {
   --color-p: #4eb1f6;
   --color-s: #00263b;
-  --color-01: #999999;
 }
 html, body{background:#ffffff; color:#141414;}
 
@@ -13,6 +12,7 @@ html, body{background:#ffffff; color:#141414;}
 .color-white, .h-color-white:hover{color:#ffffff!important;}
 .color-dark, .h-color-dark:hover{color:var(--color-dark)!important;}
 .color-gray, .h-color-gray:hover{color:#777777!important;}
+.color-sgray, .h-color-sgray:hover{color:#999999!important;}
 .color-fgray, .h-color-fgray:hover{color:#e4e4e4!important;}
 .color-p, .h-color-p:hover{color:var(--color-p)!important;}
 .color-s, .h-color-s:hover{color:var(--color-s)!important;}
@@ -25,6 +25,7 @@ html, body{background:#ffffff; color:#141414;}
 .bg-white{background:#ffffff!important;}
 .bg-dark{background:#141414!important;}
 .bg-gray{background:#777777!important;}
+.bg-sgray{background:#999999!important;}
 .bg-fgray{background:#e4e4e4!important;}
 .bg-p{background:var(--color-p)!important;}
 .bg-s{background:var(--color-s)!important;}
@@ -37,6 +38,7 @@ html, body{background:#ffffff; color:#141414;}
 .bcolor-white{border-color:#ffffff!important;}
 .bcolor-dark{border-color:#141414!important;}
 .bcolor-gray{border-color:#777777!important;}
+.bcolor-sgray{border-color:#999999!important;}
 .bcolor-fgray{border-color:#e4e4e4!important;}
 .bcolor-p{border-color:var(--color-p)!important;}
 .bcolor-s{border-color:var(--color-s)!important;}
@@ -95,12 +97,15 @@ input[type=time]:disabled, select:disabled, textarea:disabled{
   background:#f4f4f4!important; color:#555555!important;
 }
 
+
 /* Topnav */
 .topnav-spacer.has-bg + nav.topnav{background:#ffffff;}
+.topnav-spacer.white-reverse + nav.topnav:not(.sticky) .menu > *:first-child{color:#ffffff;}
+
 nav.topnav.sticky{background:#ffffff; box-shadow:rgb(0 0 0 / 3%) 0px 7px 14px;}
 nav.topnav .menu > *:first-child{color:#242424;}
 nav.topnav .menu:hover > *:first-child,
-nav.topnav .menu.active > *:first-child{color:var(--color-p);}
+nav.topnav .menu.active > *:first-child{color:var(--color-p)!important;}
 nav.topnav .menu > .dropdown{
   background:#ffffff; box-shadow:rgb(0 0 0 / 3%) 0px 7px 14px; border-color:#eeeeee;
 }
@@ -130,27 +135,5 @@ nav.footer .menu-title{color:#999999;}
 .section-01 .arrow{background:rgba(255,255,255,.5); color:#555555;}
 .section-01 .arrow:hover{background:rgba(255,255,255,1); color:#242424;}
 
-
 /* Section 04 */
 .section-04 .panel-right > .bg-filter{background:#f1f1f1;}
-
-
-/* Section 06 */
-.section-06 {background:var(--color-p);}
-
-
-/* Section 07 */
-.section-07 .chevron {color:var(--color-p);}
-
-
-/* Section 08 */
-.section-08 .chevron {color:var(--color-p);}
-
-
-/* Section 10 */
-.section-10 p {color:var(--color-01);}
-.section-10 p > .chevron{color:var(--color-p)}
-
-
-/* Section 11 */
-.section-11 p {color:var(--color-01);}

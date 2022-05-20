@@ -55,8 +55,8 @@ nav.topnav .sidenav-toggle{
 
 /* Sidenav */
 nav.sidenav{
-  display:none; position:fixed; top:0; right:0; width:270px; height:100vh; z-index:92;
-  transform:translateX(270px); transition:transform .45s;
+  display:none; position:fixed; top:0; right:0; width:320px; height:100vh; z-index:92;
+  transform:translateX(320px); transition:transform .45s;
 }
 nav.sidenav.active{transform:translateX(0);}
 nav.sidenav + .sidenav-filter{
@@ -80,7 +80,7 @@ nav.sidenav .menu > *:first-child{
 }
 nav.sidenav .submenu-container{padding:0 0 .75rem 0;}
 nav.sidenav .submenu > *:first-child{
-  display:block; font-size:1.125rem; letter-spacing:.05rem; font-weight:400; cursor:pointer;
+  display:block; font-size:1.0625rem; letter-spacing:.05rem; font-weight:400; cursor:pointer;
   padding:.25rem 1.25rem .25rem 2rem; transition:background .25s, color .25s;
 }
 

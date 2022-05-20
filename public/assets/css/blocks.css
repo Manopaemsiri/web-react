@@ -75,26 +75,34 @@
   background-size:cover; background-repeat:no-repeat; background-position:center;
 }
 .section-05.bg-sm{height:auto; min-height:500px;}
+.section-05.bg-xs{height:auto; min-height:400px;}
 .section-05.bg-fixed{background-attachment:fixed;}
 .section-05 > .bg-filter{position:absolute; top:0; bottom:0; left:0; right:0;}
 .section-05 > .container{position:relative;}
 @media screen and (max-width:1199.98px){
   .section-05{height:calc(100vh - 4.25rem);}
   .section-05.bg-sm{min-height:480px;}
+  .section-05.bg-xs{min-height:380px;}
 }
 @media screen and (max-width:991.98px){
   .section-05.bg-sm{min-height:440px;}
+  .section-05.bg-xs{min-height:360px;}
 }
 @media screen and (max-width:767.98px){
   .section-05.bg-sm{min-height:410px;}
+  .section-05.bg-xs{min-height:340px;}
 }
 @media screen and (max-width:576.98px){
   .section-05.bg-sm{min-height:380px;}
+  .section-05.bg-xs{min-height:320px;}
 }
 
 
 /* section-06 */
-.section-06{min-height:200px; display:flex; align-items:center;}
+.section-06{
+  min-height:200px; display:flex; align-items:center;
+  background-size:cover; background-position:center; background-repeat:no-repeat;
+}
 
 
 /* .section-07 */

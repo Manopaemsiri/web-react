@@ -2,9 +2,10 @@ import $ from 'jquery';
 import moment from 'moment';
 
 
-export function onMounted(topnavBg=false) {
-  if(topnavBg) $('.topnav-spacer').addClass('has-bg');
-  else $('.topnav-spacer').removeClass('has-bg');
+export function onMounted(topnavType=0) {
+  $('.topnav-spacer').removeClass('has-bg white-reverse');
+  if(topnavType === 1) $('.topnav-spacer').addClass('has-bg');
+  if(topnavType === 2) $('.topnav-spacer').addClass('white-reverse');
   return true;
 };
 

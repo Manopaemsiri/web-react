@@ -3,8 +3,9 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import { 
-  Services_Page,
   Frontend_HomePage,
+  Frontend_ServicesPage, Frontend_ServicePage,
+
   Products_Page,
   Products_Page02,
   Products_Page03,
@@ -21,7 +22,9 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Frontend_HomePage} />
-        <Route exact path="/services" component={Services_Page} />
+        <Route exact path="/services" component={Frontend_ServicesPage} />
+        <Route exact path="/service/:dataUrl" component={Frontend_ServicePage} />
+
         <Route exact path="/products" component={Products_Page} />
         <Route exact path="/products02" component={Products_Page02}></Route>
         <Route exact path="/products03" component={Products_Page03}></Route>

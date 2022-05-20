@@ -10,10 +10,11 @@ import TextTitle from "../../components/TextTitle";
 import { connect } from "react-redux";
 import { setTopnavActiveIndex } from "../../actions/general.actions";
 
+
 function HomePage(props) {
   /* eslint-disable */
   useEffect(() => {
-    onMounted(false);
+    onMounted(0);
     props.setTopnavActiveIndex(1);
   }, []);
   /* eslint-enable */

@@ -16,6 +16,9 @@ html, body{
   html{height:-webkit-fill-available;}
 }
 body.loading{height:100vh!important; overflow:hidden!important;}
+@media screen and (max-width:1199.98px){
+  html.sidenav-opened{overflow-y:hidden!important;}
+}
 
 *{box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; outline:none;}
 

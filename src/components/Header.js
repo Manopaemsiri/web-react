@@ -56,17 +56,36 @@ function Header(props) {
         name: 'SERVICES',
         goTo: '/services',
         activeIndexes: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+        children: [
+          {
+            name: 'Web App Development', activeIndex: 12, goTo: '/service/web-app-development'
+          }, {
+            name: 'Mobile App Development', activeIndex: 13, goTo: '/service/mobile-app-development'
+          }, {
+            name: 'IOT & Smart Farming', activeIndex: 14, goTo: '/service/iot-and-smart-farming'
+          }, {
+            name: 'AI & Machine Learning', activeIndex: 15, goTo: '/service/ai-and-machine-learning'
+          }, {
+            name: 'Data Analytics & Visualization', activeIndex: 16, goTo: '/service/data-analytics-and-visualization'
+          }, {
+            name: 'Product & Brand Identity', activeIndex: 17, goTo: '/service/product-and-brand-identity'
+          }, {
+            name: 'Technology Research', activeIndex: 18, goTo: '/service/technology-research'
+          }, {
+            name: 'Decentralized App (DApp)', activeIndex: 19, goTo: '/service/decentralized-app'
+          },{
+            name: 'IT Consultant', activeIndex: 20, goTo: '/service/it-consultant'
+          }, 
+        ]
       }, {
         name: 'PRODUCTS',
         goTo: '/products',
         activeIndexes: [21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
         children: [
           {
-            name: 'Products 01', activeIndex: 21, goTo: '/products'
+            name: 'Tech Origin ERP', activeIndex: 22, goTo: '/product/tech-origin-erp'
           }, {
-            name: 'Products 02', activeIndex: 22, goTo: '/products02'
-          }, {
-            name: 'Products 03', activeIndex: 23, goTo: '/products03'
+            name: 'Management Software', activeIndex: 23, goTo: '/product/management-software'
           }, 
         ]
       }, {
@@ -79,13 +98,16 @@ function Header(props) {
         activeIndexes: [41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
       }, {
         name: 'COMPANY',
-        goTo: '/company',
         activeIndexes: [51, 52, 53, 54, 55, 56, 57, 58, 59, 60],
         children: [
           {
-            name: 'About Us', activeIndex: 51, goTo: '/about'
+            name: 'About Us', activeIndex: 52, goTo: '/company/about'
           }, {
-            name: 'Contact Us', activeIndex: 52, goTo: '/contact'
+            name: 'Contact Us', activeIndex: 53, goTo: '/company/contact'
+          }, {
+            name: 'Our Team', activeIndex: 54, goTo: '/company/team'
+          }, {
+            name: 'Join Us', activeIndex: 55, goTo: '/company/join-us'
           }
         ]
       },
@@ -122,7 +144,7 @@ function Header(props) {
                           {d.children.map((k, j) => (
                             <div 
                               key={`submenu_${i}_${j}`} 
-                              className={`submenu ${k.activeIndex === props.activeIndex? 'active': ''}`} 
+                              className={`submenu ws-nowrap ${k.activeIndex === props.activeIndex? 'active': ''}`} 
                             >
                               <Link to={k.goTo}>{k.name}</Link>
                             </div>
